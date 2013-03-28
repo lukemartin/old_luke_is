@@ -547,3 +547,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* line 1, ../_sass/_layout.scss */
+body {
+  color: red;
+}
