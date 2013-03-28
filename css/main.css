@@ -594,7 +594,7 @@ table {
 
 /* line 1, ../_sass/_layout.scss */
 .main-nav {
-  background-color: #000;
+  background-color: #051723;
   padding: 1em;
   overflow: hidden;
 }
@@ -625,18 +625,24 @@ table {
 }
 @media (min-width: 480px) {
   /* line 30, ../_sass/_layout.scss */
+  .main-nav ul {
+    float: right;
+    left: 0;
+  }
+  /* line 34, ../_sass/_layout.scss */
   .main-nav li {
+    left: 0;
     margin: 0 1em;
   }
-  /* line 33, ../_sass/_layout.scss */
+  /* line 38, ../_sass/_layout.scss */
   .main-nav a {
     font-size: 2em;
   }
-  /* line 36, ../_sass/_layout.scss */
+  /* line 41, ../_sass/_layout.scss */
   .main-nav a span {
     display: block;
   }
-  /* line 39, ../_sass/_layout.scss */
+  /* line 44, ../_sass/_layout.scss */
   .main-nav a:before {
     display: none;
   }
