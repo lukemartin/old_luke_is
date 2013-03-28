@@ -12,18 +12,27 @@
 <body>
 	<div class="wrap">
 		<header>
-			<span class="logo">
-			</span>
-
 			<nav class="main-nav">
 				<ul>
+					<li><a class="icon-user" href="#"><span>About</span></a></li>
+					<li><a class="icon-suitcase" href="#"><span>Work</span></a></li>
+					<li><a class="icon-envelope" href="#"><span>Contact</span></a></li>
+					<li><a class="icon-pencil" href="#"><span>Blog</span></a></li>
 				</ul>
 			</nav>
+
+			<a href="/" class="logo">
+				luke.is
+			</a>
 		</header>
 
 		<div id="content">
 			{{ content }}
 		</div>
+
+		<footer class="hidden">
+			<small>&ldquo;It&rsquo;s not time to worry yet&hellip;&rdquo;</small>
+		</footer>
 	</div>
 
 	<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>

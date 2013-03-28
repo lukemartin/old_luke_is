@@ -1,8 +1,14 @@
 // Reset
-@import "lib/_normalize";
+@import "lib/normalize";
+
+// Fonts
+@import "fonts";
 
 // Layout
-@import "_layout";
+@import "layout";
 
 // Type
-@import "_type";
+@import "type";
+
+// Misc
+@import "misc";

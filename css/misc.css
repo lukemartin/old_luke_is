@@ -1,0 +1,6 @@
+/* line 1, ../_sass/misc.scss */
+.hidden {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}

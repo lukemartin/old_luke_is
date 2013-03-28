@@ -1,3 +1,28 @@
-body {
-	color: red;
+.main-nav {
+	background-color: #000;
+	padding: 1em;
+	overflow: hidden;
+
+	ul {
+		float: left;
+		left: 50%;
+		margin: 0;
+		padding: 0;
+		position: relative;
+	}
+	li {
+		float: left;
+		left: -50%;
+		margin: 0 2em;
+		position: relative;
+	}
+	a {
+		color: #fff;
+		font-size: 3em;
+		text-decoration: none;
+
+		span {
+			display: none;
+		}
+	}
 }
