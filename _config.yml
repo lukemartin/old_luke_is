@@ -1,0 +1,5 @@
+auto: no
+server: no
+include: js
+exclude: CNAME config.rb Gruntfile.js node_modules package.json README.md
+permalink: /blogging/:year/:month/:day/:title
