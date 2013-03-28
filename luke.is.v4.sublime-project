@@ -1,0 +1,9 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/luke/Development/sites/luke.is/v4",
+			"folder_exclude_patterns": [".sass-cache", "css", "node_modules"]
+		}
+	]
+}
