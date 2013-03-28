@@ -18,11 +18,27 @@
 	}
 	a {
 		color: #fff;
-		font-size: 3em;
+		font-size: 3.5em;
 		text-decoration: none;
 
 		span {
 			display: none;
+		}
+	}
+
+	@include breakpoint($bp1) {
+		li {
+			margin: 0 1em;
+		}
+		a {
+			font-size: 2em;
+
+			span {
+				display: block;
+			}
+			&:before {
+				display: none;
+			}
 		}
 	}
 }

@@ -27,7 +27,8 @@ module.exports = function(grunt) {
           sassDir: '_sass',
           cssDir: 'css',
           imagesDir: 'img',
-          javascriptsDir: 'js'
+          javascriptsDir: 'js',
+          require: 'breakpoint'
         }
       }
     },
