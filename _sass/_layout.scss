@@ -27,6 +27,19 @@ header {
 		margin: 0;
 		padding: 0;
 	}
+
+	li {
+	}
+
+	a {
+		display: block;
+		padding: $body_padding;
+
+		i {
+			float: left;
+			padding-right: 0.8em;
+		}
+	}
 }
 
 header input:checked ~ .main-nav {
