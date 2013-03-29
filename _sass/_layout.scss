@@ -1,49 +1,40 @@
-.main-nav {
-	background-color: #051723;
-	padding: 1em;
+$body_padding: 2%;
+
+body {
+	overflow-y: scroll;
+}
+
+header {
+	background-color: #f8f8f8;
+	border-bottom: 1px solid darken(#f8f8f8, 8%);
+	border-top: 5px solid #929da2;
 	overflow: hidden;
 
+	.logo {
+		padding: $body_padding;
+	}
+}
+
+.main-nav {
+	@include transition(0.25s);
+	background: #929da2;
+	display: block;
+	max-height: 0;
+	overflow: hidden;
+	padding: 0 $body_padding;
+
 	ul {
-		float: left;
-		left: 50%;
 		margin: 0;
 		padding: 0;
-		position: relative;
 	}
-	li {
-		float: left;
-		left: -50%;
-		margin: 0 2em;
-		position: relative;
-	}
-	a {
-		color: #fff;
-		font-size: 3.5em;
-		text-decoration: none;
+}
 
-		span {
-			display: none;
-		}
-	}
+header input:checked ~ .main-nav {
+	max-height: 15em;
+	padding: $body_padding;
+}
 
-	@include breakpoint($bp1) {
-		ul {
-			float: right;
-			left: 0;
-		}
-		li {
-			left: 0;
-			margin: 0 1em;
-		}
-		a {
-			font-size: 2em;
-
-			span {
-				display: block;
-			}
-			&:before {
-				display: none;
-			}
-		}
-	}
+.content-wrap {
+	display: none;
+	padding: $body_padding;
 }

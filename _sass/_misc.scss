@@ -3,3 +3,10 @@
 	left: -9999px;
 	top: -9999px;
 }
+
+@mixin transition($duration: 0.25s, $props: all, $easing: ease-in-out) {
+	-webkit-transition: $props $duration $easing;
+	   -moz-transition: $props $duration $easing;
+		 -o-transition: $props $duration $easing;
+			transition: $props $duration $easing;
+}
