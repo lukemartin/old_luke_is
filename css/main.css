@@ -616,35 +616,47 @@ table {
 /* line 19, ../_sass/_layout.scss */
 .main-nav a {
   color: #fff;
-  font-size: 3.5em;
+  font-size: 2em;
   text-decoration: none;
 }
 /* line 24, ../_sass/_layout.scss */
 .main-nav a span {
+  float: right;
   display: none;
 }
+/* line 28, ../_sass/_layout.scss */
+.main-nav a i {
+  float: left;
+  font-size: 2em;
+}
 @media (min-width: 480px) {
-  /* line 30, ../_sass/_layout.scss */
+  /* line 35, ../_sass/_layout.scss */
   .main-nav ul {
     float: right;
     left: 0;
   }
-  /* line 34, ../_sass/_layout.scss */
+  /* line 39, ../_sass/_layout.scss */
   .main-nav li {
     left: 0;
-    margin: 0 1em;
+    margin: 0 0 0 1.5em;
   }
-  /* line 38, ../_sass/_layout.scss */
+  /* line 43, ../_sass/_layout.scss */
   .main-nav a {
-    font-size: 2em;
+    font-size: 1.8em;
   }
-  /* line 41, ../_sass/_layout.scss */
+  /* line 46, ../_sass/_layout.scss */
   .main-nav a span {
-    display: block;
+    display: inline;
   }
-  /* line 44, ../_sass/_layout.scss */
+  /* line 49, ../_sass/_layout.scss */
   .main-nav a:before {
     display: none;
+  }
+  /* line 53, ../_sass/_layout.scss */
+  .main-nav a i {
+    font-size: 1em;
+    margin-right: 0.5em;
+    margin-top: 1px;
   }
 }
 

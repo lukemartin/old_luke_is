@@ -18,11 +18,16 @@
 	}
 	a {
 		color: #fff;
-		font-size: 3.5em;
+		font-size: 2em;
 		text-decoration: none;
 
 		span {
+			float: right;
 			display: none;
+		}
+		i {
+			float: left;
+			font-size: 2em;
 		}
 	}
 
@@ -33,16 +38,22 @@
 		}
 		li {
 			left: 0;
-			margin: 0 1em;
+			margin: 0 0 0 1.5em;
 		}
 		a {
-			font-size: 2em;
+			font-size: 1.8em;
 
 			span {
-				display: block;
+				display: inline;
 			}
 			&:before {
 				display: none;
+			}
+
+			i {
+				font-size: 1em;
+				margin-right: 0.5em;
+				margin-top: 1px;
 			}
 		}
 	}
