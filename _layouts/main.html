@@ -6,14 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<base href="/" />
 
-	<link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet'>
-
 	<link href="/css/main.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 	<div class="wrap">
 		<header>
+			<input type="checkbox" name="mobile-nav" id="mobile-nav" />
 			<nav class="main-nav">
 				<ul>
 					<li>
@@ -44,12 +44,16 @@
 			</nav>
 
 			<a href="/" class="logo">
-				luke.is
+				luke<span>.is</span>
 			</a>
+
+			<label for="mobile-nav">Menu</label>
 		</header>
 
-		<div id="content">
-			{{ content }}
+		<div class="content-wrap">
+			<div id="content">
+				{{ content }}
+			</div>
 		</div>
 
 		<footer class="hidden">

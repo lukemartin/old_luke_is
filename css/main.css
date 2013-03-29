@@ -592,14 +592,92 @@ table {
   content: "\e002";
 }
 
-/* line 1, ../_sass/_type.scss */
-body {
-  font-size: 0.625em;
-}
-
 /* line 1, ../_sass/_misc.scss */
 .hidden {
   position: absolute;
   left: -9999px;
   top: -9999px;
+}
+
+/* line 3, ../_sass/_layout.scss */
+body {
+  overflow-y: scroll;
+}
+
+/* line 7, ../_sass/_layout.scss */
+header {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e4e4e4;
+  border-top: 5px solid #929da2;
+  overflow: hidden;
+}
+/* line 13, ../_sass/_layout.scss */
+header .logo {
+  padding: 2%;
+}
+
+/* line 18, ../_sass/_layout.scss */
+.main-nav {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  background: #929da2;
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 2%;
+}
+/* line 26, ../_sass/_layout.scss */
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 32, ../_sass/_layout.scss */
+header input:checked ~ .main-nav {
+  max-height: 15em;
+  padding: 2%;
+}
+
+/* line 37, ../_sass/_layout.scss */
+.content-wrap {
+  display: none;
+  padding: 2%;
+}
+
+/* line 1, ../_sass/_type.scss */
+body {
+  color: #929DA2;
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  font-size: 0.625em;
+  font-weight: 300;
+}
+
+/* line 9, ../_sass/_type.scss */
+header .logo {
+  color: #3a3a3a;
+  float: left;
+  font-size: 3em;
+  text-decoration: none;
+}
+/* line 15, ../_sass/_type.scss */
+header .logo span {
+  color: #929DA2;
+  float: right;
+}
+/* line 20, ../_sass/_type.scss */
+header input {
+  display: none;
+}
+/* line 23, ../_sass/_type.scss */
+header label {
+  float: right;
+  font-size: 1.4em;
+  padding: 1em 2% 0.9em 4em;
+}
+/* line 29, ../_sass/_type.scss */
+header .main-nav a {
+  color: #fff;
+  text-decoration: none;
 }

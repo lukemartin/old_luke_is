@@ -1,4 +1,34 @@
 body {
-	//font-family: 'Tauri', sans-serif;
+	color: #929DA2;
+	font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
 	font-size: 0.625em;
+	font-weight: 300;
+}
+// stripey colour gradient on top border
+header {
+	.logo {
+		color: #3a3a3a;
+		float: left;
+		font-size: 3em;
+		text-decoration: none;
+
+		span {
+			color: #929DA2;
+			float: right;
+		}
+	}
+	input {
+		display: none;
+	}
+	label {
+		float: right;
+		font-size: 1.4em;
+		padding: 1em $body_padding 0.9em 4em;
+	}
+	.main-nav {
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
 }
