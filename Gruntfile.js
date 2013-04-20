@@ -79,18 +79,10 @@ module.exports = function(grunt) {
         options: {
           banner: '/*! [grunt] <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
         },
-        files: {
-          'css/main.min.css': ['css/main.css']
-        }
+        files: { 'css/main.min.css': ['css/main.css'] }
       }
     }
   });
-
-  // Load the plugin that provides the "uglify" task.
-  //grunt.loadNpmTasks('grunt-contrib-uglify');
-
-  // Load the plugin that provides the "cssmin" task.
-  //grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-copy');
