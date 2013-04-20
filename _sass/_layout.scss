@@ -17,7 +17,7 @@ header {
 
 .main-nav {
 	@include transition(0.25s);
-	background: #929da2;
+	@include gradient(#929da2, lighten(#929da2, 5%));
 	display: block;
 	max-height: 0;
 	overflow: hidden;
@@ -48,6 +48,5 @@ header input:checked ~ .main-nav {
 }
 
 .content-wrap {
-	display: none;
 	padding: $body_padding;
 }

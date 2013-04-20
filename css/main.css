@@ -622,7 +622,12 @@ header .logo {
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  background: #929da2;
+  background-color: #929da2;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#929da2), to(#a0a9ae));
+  background-image: -webkit-linear-gradient(top, #929da2, #a0a9ae);
+  background-image: -moz-linear-gradient(top, #929da2, #a0a9ae);
+  background-image: -o-linear-gradient(top, #929da2, #a0a9ae);
+  background-image: linear-gradient(to bottom, #929da2, #a0a9ae);
   display: block;
   max-height: 0;
   overflow: hidden;
@@ -652,43 +657,88 @@ header input:checked ~ .main-nav {
 
 /* line 50, ../_sass/_layout.scss */
 .content-wrap {
-  display: none;
   padding: 2%;
 }
 
-/* line 1, ../_sass/_type.scss */
+/* line 10, ../_sass/_type.scss */
 body {
-  color: #929DA2;
-  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
-  font-size: 0.625em;
+  font-family: Helvetica, Arial, sans-serif;
   font-weight: 300;
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #929DA2;
+  font-size: 0.625em;
 }
 
-/* line 9, ../_sass/_type.scss */
+/* line 18, ../_sass/_type.scss */
 header .logo {
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  font-weight: 300;
   color: #3a3a3a;
   float: left;
   font-size: 3em;
   text-decoration: none;
 }
-/* line 15, ../_sass/_type.scss */
+/* line 25, ../_sass/_type.scss */
 header .logo span {
   color: #929DA2;
   float: right;
 }
-/* line 20, ../_sass/_type.scss */
+/* line 30, ../_sass/_type.scss */
 header input {
   display: none;
 }
-/* line 23, ../_sass/_type.scss */
+/* line 33, ../_sass/_type.scss */
 header label {
   float: right;
   font-size: 1.4em;
   padding: 1em 2% 0.7em 4em;
 }
-/* line 29, ../_sass/_type.scss */
+/* line 39, ../_sass/_type.scss */
+header .main-nav li {
+  font-size: 1.4em;
+}
+/* line 42, ../_sass/_type.scss */
 header .main-nav a {
   color: #fff;
+  text-decoration: none;
+}
+
+/* line 50, ../_sass/_type.scss */
+h1, h2, h3,
+h4, h5, h6 {
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-weight: 300;
+}
+
+/* line 56, ../_sass/_type.scss */
+ul.unstyled,
+ol.unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 62, ../_sass/_type.scss */
+li {
   font-size: 1.4em;
+  line-height: 1.5;
+}
+
+/* line 67, ../_sass/_type.scss */
+p {
+  font-size: 1.4em;
+  line-height: 1.5;
+}
+
+/* line 72, ../_sass/_type.scss */
+.lead {
+  font-size: 2.4em;
+}
+
+/* line 76, ../_sass/_type.scss */
+a {
+  color: #3a3a3a;
   text-decoration: none;
 }

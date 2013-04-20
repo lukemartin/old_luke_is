@@ -1,0 +1,19 @@
+{% include header.html %}
+				<article>
+					{{ content }}
+				</article>
+
+				<div class="footer">
+					{% if page.previous.url %}
+					<div class="past">
+						<a href="{{ page.previous.url }}">Previous</a>
+					</div>
+					{% endif %}
+
+					{% if page.next.url %}
+					<div class="past">
+						<a href="{{ page.next.url }}">Next</a>
+					</div>
+					{% endif %}
+				</div>
+{% include footer.html %}

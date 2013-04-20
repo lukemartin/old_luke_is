@@ -3,4 +3,15 @@ layout: main
 title: Homepage
 ---
 
-<h1><span class="hidden">Luke is</span> a Front End developer from London</h1>
+<h1 class="hidden">Luke Martin &ndash; Front End Developer from London.</h1>
+
+<p class="lead">Hello. I'm Luke Martin, a Front End developer from London.</p>
+
+<h2>Posts</h2>
+<ul class="unstyled">
+	{% for post in site.posts %}
+	<li>
+		<a href="{{ post.url }}">{{ post.date | date: '%d/%m' }}: {{ post.title }}</a>
+	</li>
+	{% endfor %}
+</ul>
