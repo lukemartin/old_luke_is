@@ -1,8 +1,14 @@
 // Breakpoint
 @import "breakpoint";
 
-// Reset
-@import "lib/normalize";
+// Variables
+$function-colour-dark: lighten(#000, 51);
 
-body {
-}
+// Type
+@import "type";
+
+// Layout
+@import "layout";
+
+// Nav
+@import "nav";

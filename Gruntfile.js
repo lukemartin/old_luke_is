@@ -79,7 +79,7 @@ module.exports = function(grunt) {
         options: {
           banner: '/*! [grunt] <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
         },
-        files: { 'css/main.min.css': ['css/main.css'] }
+        files: { 'css/main.min.css': ['css/lib/normalize.css', 'css/main.css'] }
       }
     }
   });

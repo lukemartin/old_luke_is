@@ -7,6 +7,7 @@
 	<base href="/" />
 
 	{% if site.url == 'http://luke.is.dev' %}
+	<link href="/css/lib/normalize.css" rel="stylesheet">
 	<link href="/css/main.css" rel="stylesheet">
 	{% else %}
 	<link href="/css/main.min.css" rel="stylesheet">
@@ -17,15 +18,17 @@
 <body>
 	<div class="wrap">
 		<header>
-			<nav class="main-nav">
-				<ul>
-
-				</ul>
-			</nav>
-
-			<a href="/" class="logo">
+			<a href="/" class="logo h1">
 				luke<span>.is</span>
 			</a>
+			<nav class="main-nav">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/work">Work</a></li>
+					<li><a href="/contact">Contact</a></li>
+					<li><a href="/blog">Blog</a></li>
+				</ul>
+			</nav>
 		</header>
 
 		<div class="content-wrap">
