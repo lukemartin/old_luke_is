@@ -1,4 +1,40 @@
 
-{% include header.html %}
+	{% if site.url == 'http://luke.is.dev' %}
+	<link href="/css/main.css" rel="stylesheet">
+	{% else %}
+	<link href="/css/main.min.css" rel="stylesheet">
+	{% endif %}
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<nav class="main-nav">
+				<ul>
+
+				</ul>
+			</nav>
+
+			<a href="/" class="logo">
+				luke<span>.is</span>
+			</a>
+		</header>
+
+		<div class="content-wrap">
+			<div id="content">
 				{{ content }}
-{% include footer.html %}
+			</div>
+		</div>
+
+		<footer class="hidden">
+		</footer>
+	</div>
+
+	{% if site.url == 'http://luke.is.dev' %}
+	<script src="./js/main.js"></script>
+	{% else %}
+	<script src="./js/main.min.js"></script>
+	{% endif %}
+</body>
+</html>

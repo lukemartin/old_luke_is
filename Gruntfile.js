@@ -28,7 +28,9 @@ module.exports = function(grunt) {
           cssDir: 'css',
           imagesDir: 'img',
           javascriptsDir: 'js',
-          require: 'breakpoint'
+          require: 'breakpoint',
+          force: true,
+          outputStyle: 'expanded' //nested, expanded, compact, compressed
         }
       }
     },
@@ -52,8 +54,34 @@ module.exports = function(grunt) {
     },
     shell: {
       jekyll: {
+          command: 'rm -rf _site/*; jekyll --url http://luke.is.dev',
+          stdout: true
+      },
+      jekyll_deploy: {
           command: 'rm -rf _site/*; jekyll',
           stdout: true
+      }
+    },
+    uglify: {
+      options: {
+        banner: '/*! [grunt] <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+      },
+      my_target: {
+        files: {
+          'js/main.min.js': [
+            'js/main.js'
+          ]
+        }
+      }
+    },
+    cssmin: {
+      with_banner: {
+        options: {
+          banner: '/*! [grunt] <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        },
+        files: {
+          'css/main.min.css': ['css/main.css']
+        }
       }
     }
   });
@@ -68,8 +96,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Default task(s).
   grunt.registerTask('default', ['compass:dev', 'shell:jekyll', 'watch']);
+  grunt.registerTask('deploy', ['compass:dev', 'uglify', 'cssmin', 'shell:jekyll_deploy']);
 
 };
