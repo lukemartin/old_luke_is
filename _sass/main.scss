@@ -1,8 +1,12 @@
 // Breakpoint
 @import "breakpoint";
+// Gradients
+@import "compass/css3/images";
+@import "compass/css3/transition";
 
 // Variables
 $function-colour-dark: lighten(#000, 51);
+$body-padding: 2%;
 
 // Type
 @import "type";
@@ -10,5 +14,5 @@ $function-colour-dark: lighten(#000, 51);
 // Layout
 @import "layout";
 
-// Nav
-@import "nav";
+// Header
+@import "header";

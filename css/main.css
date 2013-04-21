@@ -1,22 +1,144 @@
-/* line 7, ../_sass/_type.scss */
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: 'Ubuntu';
-  font-weight: normal;
-}
-
-/* line 11, ../_sass/_type.scss */
+/* line 10, ../_sass/_type.scss */
 body {
+  color: #929DA2;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  font-weight: 300;
   font-size: 0.625em;
 }
 
-/* line 16, ../_sass/_type.scss */
+/* line 18, ../_sass/_type.scss */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+/* line 23, ../_sass/_type.scss */
 h1,
 .h1 {
   font-size: 4em;
 }
 
+/* line 28, ../_sass/_type.scss */
+ul.unstyled,
+ol.unstyled {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 34, ../_sass/_type.scss */
+li {
+  font-size: 1.4em;
+  line-height: 1.5;
+}
+
+/* line 39, ../_sass/_type.scss */
+p {
+  font-size: 1.4em;
+  line-height: 1.5;
+}
+
+/* line 44, ../_sass/_type.scss */
+.lead {
+  font-size: 2.4em;
+}
+
+/* line 48, ../_sass/_type.scss */
+a {
+  color: #3a3a3a;
+  text-decoration: none;
+}
+
 /* line 1, ../_sass/_layout.scss */
 body {
   overflow-y: scroll;
+}
+
+/* line 8, ../_sass/_layout.scss */
+.content-wrap {
+  padding: 2%;
+}
+
+/* line 1, ../_sass/_header.scss */
+.main-header {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e4e4e4;
+  border-top: 5px solid #929da2;
+  overflow: hidden;
+}
+/* line 7, ../_sass/_header.scss */
+.main-header input {
+  display: none;
+}
+/* line 10, ../_sass/_header.scss */
+.main-header label {
+  float: right;
+  font-size: 1.4em;
+  padding: 1em 2% 0.7em 4em;
+}
+
+/* line 17, ../_sass/_header.scss */
+.branding {
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #3a3a3a;
+  float: left;
+  font-size: 3em;
+  padding: 2%;
+  text-decoration: none;
+}
+/* line 25, ../_sass/_header.scss */
+.branding span {
+  color: #929DA2;
+  float: right;
+}
+
+/* line 31, ../_sass/_header.scss */
+.main-nav {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #929da2), color-stop(100%, #a0a9ae));
+  background-image: -webkit-linear-gradient(#929da2, #a0a9ae);
+  background-image: -moz-linear-gradient(#929da2, #a0a9ae);
+  background-image: -o-linear-gradient(#929da2, #a0a9ae);
+  background-image: linear-gradient(#929da2, #a0a9ae);
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  display: block;
+  max-height: 15em;
+  overflow: hidden;
+  padding: 0 2%;
+}
+/* line 39, ../_sass/_header.scss */
+.main-nav ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 47, ../_sass/_header.scss */
+.main-nav a {
+  display: block;
+  padding: 2%;
+}
+/* line 51, ../_sass/_header.scss */
+.main-nav a i {
+  float: left;
+  padding-right: 0.8em;
+}
+
+/* line 59, ../_sass/_header.scss */
+.main-nav li {
+  font-size: 1.4em;
+}
+/* line 62, ../_sass/_header.scss */
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 68, ../_sass/_header.scss */
+header input:not(:checked) ~ .main-nav {
+  max-height: 0;
 }
