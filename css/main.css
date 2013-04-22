@@ -10,7 +10,7 @@ body {
   font-weight: 300;
   font-family: "Ubuntu", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 
 /* line 21, ../_sass/_type.scss */
@@ -23,38 +23,70 @@ h1, h2, h3, h4, h5, h6,
 /* line 26, ../_sass/_type.scss */
 h1,
 .h1 {
-  font-size: 4rem;
+  font-size: 3.2rem;
 }
 
-/* line 31, ../_sass/_type.scss */
-ul.unstyled,
-ol.unstyled {
+/* line 30, ../_sass/_type.scss */
+h2,
+.h2 {
+  font-size: 2.8rem;
+}
+
+/* line 34, ../_sass/_type.scss */
+h3,
+.h3 {
+  font-size: 2.4rem;
+}
+
+/* line 39, ../_sass/_type.scss */
+h4,
+.h4,
+.lead {
+  font-size: 2.0rem;
+}
+
+/* line 45, ../_sass/_type.scss */
+h5,
+.h5,
+h6,
+.h6 {
+  font-size: 1.8rem;
+}
+
+/* line 49, ../_sass/_type.scss */
+.unstyled-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 37, ../_sass/_type.scss */
+/* line 55, ../_sass/_type.scss */
 li {
-  font-size: 1.4rem;
-  line-height: 1.5;
+  font-size: 1.6rem;
+  line-height: 1.66;
+}
+/* line 60, ../_sass/_type.scss */
+li > ol,
+li > ul {
+  margin: 0;
 }
 
-/* line 42, ../_sass/_type.scss */
+/* line 65, ../_sass/_type.scss */
 p {
-  font-size: 1.4rem;
-  line-height: 1.5;
+  font-size: 1.6rem;
+  line-height: 1.66;
 }
 
-/* line 47, ../_sass/_type.scss */
-.lead {
-  font-size: 2.4rem;
-}
-
-/* line 51, ../_sass/_type.scss */
+/* line 70, ../_sass/_type.scss */
 a {
-  color: #000;
+  color: #ff5a77;
   text-decoration: none;
+}
+
+/* line 1, ../_sass/_layout.scss */
+.content {
+  overflow: hidden;
+  padding: 4%;
 }
 
 /* line 1, ../_sass/_header.scss */
@@ -68,12 +100,13 @@ a {
 }
 /* line 9, ../_sass/_header.scss */
 .main-header .mobile-nav-label {
+  font-size: 1.4rem;
   position: absolute;
-  top: 22px;
-  right: 2%;
+  right: 4%;
+  top: 24px;
 }
 
-/* line 16, ../_sass/_header.scss */
+/* line 17, ../_sass/_header.scss */
 .main-nav {
   -webkit-transition: max-height 0.25s ease-in-out;
   -moz-transition: max-height 0.25s ease-in-out;
@@ -87,35 +120,54 @@ a {
   background-image: linear-gradient(#1a1a1a, #262626);
   border-bottom: 0px solid #1a1a1a;
   border-top: 5px solid #1a1a1a;
-  max-height: 20rem;
+  max-height: 30rem;
 }
-/* line 24, ../_sass/_header.scss */
+/* line 25, ../_sass/_header.scss */
 .main-nav ul {
   margin: 0;
   padding: 0;
 }
-/* line 28, ../_sass/_header.scss */
+/* line 29, ../_sass/_header.scss */
 .main-nav li {
   font-size: 1.6rem;
 }
-/* line 31, ../_sass/_header.scss */
+/* line 32, ../_sass/_header.scss */
 .main-nav a {
   color: #fff;
   display: block;
-  padding: 2%;
+  padding: 4%;
 }
-/* line 36, ../_sass/_header.scss */
+/* line 37, ../_sass/_header.scss */
 .main-nav a:active {
   background-color: #333333;
 }
 
-/* line 42, ../_sass/_header.scss */
+/* line 43, ../_sass/_header.scss */
 .mobile-nav-checkbox:not(:checked) ~ .main-nav {
   max-height: 0;
 }
 
-/* line 46, ../_sass/_header.scss */
+/* line 47, ../_sass/_header.scss */
 .branding {
+  color: #000;
   display: inline-block;
-  padding: 2%;
+  padding: 4%;
+}
+
+/* line 1, ../_sass/_images.scss */
+figure {
+  text-align: center;
+}
+/* line 4, ../_sass/_images.scss */
+figure img {
+  max-width: 100%;
+}
+/* line 7, ../_sass/_images.scss */
+figure figcaption {
+  text-align: left;
+}
+/* line 12, ../_sass/_images.scss */
+figure.full img {
+  margin-left: -4.5%;
+  max-width: 109%;
 }

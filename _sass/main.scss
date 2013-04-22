@@ -6,7 +6,7 @@
 
 // Variables
 $function-colour-dark: lighten(#000, 51);
-$body-padding: 2%;
+$body-padding: 4%;
 
 // Type
 @import "type";
@@ -16,3 +16,6 @@ $body-padding: 2%;
 
 // Header
 @import "header";
+
+// Images
+@import "images";

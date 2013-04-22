@@ -3,4 +3,21 @@ layout: main
 title: main
 ---
 
-<h1>Hi</h1>
+<h1>
+	Hello.
+</h1>
+
+<h2>Recent work</h2>
+<p>Something</p>
+
+<h2>Recent posts</h2>
+<ul>
+	{% for post in paginator.posts %}
+	<li>
+		<span class="post-date">
+			{{ post.date | date_to_string }}
+		</span>
+		<a href="{{ post.url }}">{{ post.title }}</a>
+	</li>
+	{% endfor %}
+</ul>

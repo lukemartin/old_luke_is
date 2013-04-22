@@ -1,0 +1,17 @@
+figure {
+	text-align: center;
+
+	img {
+		max-width: 100%;
+	}
+	figcaption {
+		text-align: left;
+	}
+
+	&.full {
+		img {
+			margin-left: -$body-padding - 0.5;
+			max-width: ($body-padding * 2) + 1 + 100%;
+		}
+	}
+}

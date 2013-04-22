@@ -7,9 +7,10 @@
 	}
 
 	.mobile-nav-label {
+		font-size: 1.4rem;
 		position: absolute;
-		top: 22px;
 		right: $body-padding;
+		top: 24px;
 	}
 }
 
@@ -19,7 +20,7 @@
 	@include background-image(linear-gradient(lighten(#000, 10%), lighten(#000, 15%)));
 	border-bottom: 0px solid lighten(#000, 10%);
 	border-top: 5px solid lighten(#000, 10%);
-	max-height: 20rem;
+	max-height: 30rem;
 
 	ul {
 		margin: 0;
@@ -44,6 +45,7 @@
 }
 
 .branding {
+	color: #000;
 	display: inline-block;
 	padding: $body-padding;
 }
