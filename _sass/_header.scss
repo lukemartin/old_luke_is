@@ -7,6 +7,7 @@
 	}
 
 	.mobile-nav-label {
+		cursor: pointer;
 		font-size: 1.4rem;
 		position: absolute;
 		right: $body-padding;
@@ -47,5 +48,6 @@
 .branding {
 	color: #000;
 	display: inline-block;
+	margin: 0;
 	padding: $body-padding;
 }

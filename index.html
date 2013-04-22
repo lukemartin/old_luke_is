@@ -5,13 +5,24 @@ title: main
 
 <h1>
 	Hello.
+	<br>
+	My name is Luke Martin, and I'm a freelance Front End Developer living in London.
 </h1>
 
-<h2>Recent work</h2>
-<p>Something</p>
+<h2>Recent project</h2>
+<article>
+	<figure class="full">
+		<img src="http://placekitten.com/600/250" alt="">
+	</figure>
+	<h3>Some project</h3>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, accusantium illo obcaecati earum tempora explicabo itaque non vero laboriosam perspiciatis sit cupiditate unde libero illum at hic veniam! Optio, porro.</p>
+</article>
+<p>
+	<a href="/projects/">More projects</a>
+</p>
 
 <h2>Recent posts</h2>
-<ul>
+<ul class="unstyled-list">
 	{% for post in paginator.posts %}
 	<li>
 		<span class="post-date">
@@ -21,3 +32,7 @@ title: main
 	</li>
 	{% endfor %}
 </ul>
+
+<p>
+	<a href="/blogging/">More posts</a>
+</p>
