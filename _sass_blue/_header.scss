@@ -1,0 +1,71 @@
+.main-header {
+	background-color: #f8f8f8;
+	border-bottom: 1px solid darken(#f8f8f8, 8%);
+	border-top: 5px solid #929da2;
+	overflow: hidden;
+
+	input {
+		display: none;
+	}
+	label {
+		float: right;
+		font-size: 1.4em;
+		padding: 1em $body_padding 0.7em 4em;
+	}
+}
+
+.branding {
+	@include header_font;
+	color: #3a3a3a;
+	float: left;
+	font-size: 3em;
+	padding: $body_padding;
+	text-decoration: none;
+
+	span {
+		color: #929DA2;
+		float: right;
+	}
+}
+
+.main-nav {
+	@include background-image(linear-gradient(#929da2, lighten(#929da2, 5%)));
+	@include transition(all 0.25s ease-in);
+	display: block;
+	max-height: 15em;
+	overflow: hidden;
+	padding: 0 $body_padding;
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+	}
+
+	a {
+		display: block;
+		padding: $body_padding;
+
+		i {
+			float: left;
+			padding-right: 0.8em;
+		}
+	}
+}
+
+.main-nav {
+	li {
+		font-size: 1.4em;
+	}
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+header input:not(:checked) ~ .main-nav {
+	max-height: 0;
+	//padding: $body_padding;
+}

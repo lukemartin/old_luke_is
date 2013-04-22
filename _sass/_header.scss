@@ -1,71 +1,49 @@
 .main-header {
-	background-color: #f8f8f8;
-	border-bottom: 1px solid darken(#f8f8f8, 8%);
-	border-top: 5px solid #929da2;
 	overflow: hidden;
+	position: relative;
 
-	input {
+	.mobile-nav-checkbox {
 		display: none;
 	}
-	label {
-		float: right;
-		font-size: 1.4em;
-		padding: 1em $body_padding 0.7em 4em;
-	}
-}
 
-.branding {
-	@include header_font;
-	color: #3a3a3a;
-	float: left;
-	font-size: 3em;
-	padding: $body_padding;
-	text-decoration: none;
-
-	span {
-		color: #929DA2;
-		float: right;
+	.mobile-nav-label {
+		position: absolute;
+		top: 22px;
+		right: $body-padding;
 	}
 }
 
 .main-nav {
-	@include background-image(linear-gradient(#929da2, lighten(#929da2, 5%)));
-	@include transition(all 0.25s ease-in);
-	display: block;
-	max-height: 15em;
-	overflow: hidden;
-	padding: 0 $body_padding;
+	@include transition(max-height 0.25s ease-in-out);
+	background-color: lighten(#000, 10%);
+	@include background-image(linear-gradient(lighten(#000, 10%), lighten(#000, 15%)));
+	border-bottom: 0px solid lighten(#000, 10%);
+	border-top: 5px solid lighten(#000, 10%);
+	max-height: 20rem;
 
 	ul {
 		margin: 0;
 		padding: 0;
 	}
-
 	li {
+		font-size: 1.6rem;
 	}
-
 	a {
+		color: #fff;
 		display: block;
-		padding: $body_padding;
+		padding: $body-padding;
 
-		i {
-			float: left;
-			padding-right: 0.8em;
+		&:active {
+			background-color: lighten(#000, 20%);
 		}
 	}
 }
 
-.main-nav {
-	li {
-		font-size: 1.4em;
-	}
-	a {
-		color: #fff;
-		text-decoration: none;
-	}
+.mobile-nav-checkbox:not(:checked) ~ .main-nav {
+	max-height: 0;
 }
 
-header input:not(:checked) ~ .main-nav {
-	max-height: 0;
-	//padding: $body_padding;
+.branding {
+	display: inline-block;
+	padding: $body-padding;
 }
