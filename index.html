@@ -1,7 +1,6 @@
 ---
 layout: main
 title: main
-body-class: home
 ---
 
 <h1 class="home-lead">
@@ -11,7 +10,7 @@ body-class: home
 </h1>
 
 <div class="column-wrap">
-	<div class="column-two-thirds">
+	<div class="column-two-thirds column-right">
 		<h2>Recent project</h2>
 		<article>
 			<figure class="full">
@@ -32,20 +31,7 @@ body-class: home
 			<a href="/projects/">More projects</a>
 		</p>
 	</div>
-	<div class="column-one-third">
-		<h2>Recent posts</h2>
-		<ul class="unstyled-list">
-			{% for post in paginator.posts %}
-			<li>
-				<span class="post-date">
-					{{ post.date | date_to_string }}
-				</span>
-				<a href="{{ post.url }}">{{ post.title }}</a>
-			</li>
-			{% endfor %}
-		</ul>
-		<p>
-			<a href="/blogging/">More posts</a>
-		</p>
+	<div class="column-one-third column-left">
+		{% include recent-posts.html %}
 	</div>
 </div>

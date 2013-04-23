@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         tasks: ['compass:dev']
       },
       files: {
-        files: ['*.html', '*.yml', '*.md', '_posts/**', '_includes/**', '_layouts/**'],
+        files: ['*.html', '*.yml', '*.md', '_posts/**', '_includes/**', '_layouts/**', 'blogging/**'],
         tasks: ['shell:jekyll']
       },
       scripts: {

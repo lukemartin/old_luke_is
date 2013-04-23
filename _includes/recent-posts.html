@@ -1,0 +1,14 @@
+<h2>Recent posts</h2>
+<ul class="unstyled-list">
+	{% for post in paginator.posts %}
+	<li>
+		<span class="post-date">
+			{{ post.date | date_to_string }}
+		</span>
+		<a href="{{ post.url }}">{{ post.title }}</a>
+	</li>
+	{% endfor %}
+</ul>
+<p>
+	<a href="/blogging/">More posts</a>
+</p>
