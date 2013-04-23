@@ -114,13 +114,13 @@ a {
 
   /* line 20, ../_sass/_layout.scss */
   .column-two-thirds {
-    float: left;
+    float: right;
     width: 65%;
   }
 
   /* line 24, ../_sass/_layout.scss */
   .column-one-third {
-    float: right;
+    float: left;
     width: 32%;
   }
 
@@ -295,6 +295,6 @@ figure.full figcaption {
 @media (min-width: 960px) {
   /* line 7, ../_sass/_home.scss */
   .home h1 {
-    padding: 0 20%;
+    padding: 30px 20%;
   }
 }
