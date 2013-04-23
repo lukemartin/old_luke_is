@@ -1,6 +1,8 @@
 // Breakpoint
 @import "breakpoint";
 $bp1: 640px;
+$bp2: 800px;
+$bp3: 960px;
 
 // Gradients
 @import "compass/css3/images";
@@ -8,7 +10,7 @@ $bp1: 640px;
 
 // Variables
 $function-colour-dark: lighten(#000, 51);
-$body-padding: 4%;
+$body-padding-x: 4%;
 
 // Type
 @import "type";
@@ -21,3 +23,6 @@ $body-padding: 4%;
 
 // Images
 @import "images";
+
+// Home
+@import "home";

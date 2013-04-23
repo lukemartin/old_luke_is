@@ -1,6 +1,6 @@
 ---
 layout: main
-title: Something
+title: Some Interesting Post
 ---
 
 # Yeah :D

@@ -1,4 +1,36 @@
 .content {
 	overflow: hidden;
-	padding: $body-padding;
+	padding: 0 $body-padding-x 100px $body-padding-x;
+}
+
+@include breakpoint($bp3) {
+	.main-header,
+	.content {
+		margin: 0 auto;
+		padding-left: 0;
+		padding-right: 0;
+		width: 960px;
+	}
+}
+
+@include breakpoint($bp2) {
+	.column-wrap {
+		overflow: hidden;
+	}
+	.column-two-thirds {
+		float: left;
+		width: 65%;
+	}
+	.column-one-third {
+		float: right;
+		width: 32%;
+	}
+	.column-one-half {
+		float: left;
+		width: 48%;
+
+		&:nth-child(even) {
+			float: right;
+		}
+	}
 }

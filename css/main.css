@@ -93,9 +93,47 @@ a {
 /* line 1, ../_sass/_layout.scss */
 .content {
   overflow: hidden;
-  padding: 4%;
+  padding: 0 4% 100px 4%;
 }
 
+@media (min-width: 960px) {
+  /* line 8, ../_sass/_layout.scss */
+  .main-header,
+  .content {
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    width: 960px;
+  }
+}
+@media (min-width: 800px) {
+  /* line 17, ../_sass/_layout.scss */
+  .column-wrap {
+    overflow: hidden;
+  }
+
+  /* line 20, ../_sass/_layout.scss */
+  .column-two-thirds {
+    float: left;
+    width: 65%;
+  }
+
+  /* line 24, ../_sass/_layout.scss */
+  .column-one-third {
+    float: right;
+    width: 32%;
+  }
+
+  /* line 28, ../_sass/_layout.scss */
+  .column-one-half {
+    float: left;
+    width: 48%;
+  }
+  /* line 32, ../_sass/_layout.scss */
+  .column-one-half:nth-child(even) {
+    float: right;
+  }
+}
 /* line 1, ../_sass/_header.scss */
 .main-header {
   overflow: hidden;
@@ -111,7 +149,7 @@ a {
   font-size: 1.4rem;
   position: absolute;
   right: 4%;
-  top: 24px;
+  top: 36%;
 }
 
 /* line 18, ../_sass/_header.scss */
@@ -143,7 +181,7 @@ a {
 .main-nav a {
   color: #fff;
   display: block;
-  padding: 4%;
+  padding: 1.6rem 4%;
 }
 /* line 38, ../_sass/_header.scss */
 .main-nav a:active {
@@ -160,9 +198,60 @@ a {
   color: #000;
   display: inline-block;
   margin: 0;
-  padding: 4%;
+  padding: 18px 4%;
 }
 
+@media (min-width: 640px) {
+  /* line 56, ../_sass/_header.scss */
+  .branding {
+    float: left;
+  }
+
+  /* line 59, ../_sass/_header.scss */
+  .main-header .mobile-nav-label {
+    display: none;
+  }
+
+  /* line 62, ../_sass/_header.scss */
+  .mobile-nav-checkbox:not(:checked) ~ .main-nav {
+    max-height: none;
+  }
+
+  /* line 65, ../_sass/_header.scss */
+  .main-nav {
+    background: none;
+    border: none;
+    float: right;
+    margin-right: 4%;
+    margin-top: 22px;
+    max-height: none;
+  }
+  /* line 73, ../_sass/_header.scss */
+  .main-nav li {
+    float: left;
+    margin-left: 2rem;
+  }
+  /* line 77, ../_sass/_header.scss */
+  .main-nav a {
+    color: #000;
+    padding: 0;
+  }
+  /* line 81, ../_sass/_header.scss */
+  .main-nav a:active {
+    background-color: transparent;
+  }
+}
+@media (min-width: 960px) {
+  /* line 89, ../_sass/_header.scss */
+  .branding {
+    padding-left: 0;
+  }
+
+  /* line 92, ../_sass/_header.scss */
+  .main-nav {
+    margin-right: 0;
+  }
+}
 /* line 1, ../_sass/_images.scss */
 figure {
   margin: 2rem 0;
@@ -174,10 +263,38 @@ figure img {
 }
 /* line 8, ../_sass/_images.scss */
 figure figcaption {
+  font-size: 1.4rem;
   text-align: left;
 }
 /* line 13, ../_sass/_images.scss */
-figure.full img {
+figure.full {
   margin-left: -4.5%;
-  max-width: 109%;
+  width: 109%;
+}
+/* line 17, ../_sass/_images.scss */
+figure.full img {
+  width: 100%;
+}
+/* line 20, ../_sass/_images.scss */
+figure.full figcaption {
+  padding: 0 4%;
+}
+
+@media (min-width: 640px) {
+  /* line 28, ../_sass/_images.scss */
+  figure.full {
+    margin-left: 0;
+    max-width: 100%;
+    width: auto;
+  }
+  /* line 33, ../_sass/_images.scss */
+  figure.full figcaption {
+    padding: 0;
+  }
+}
+@media (min-width: 960px) {
+  /* line 7, ../_sass/_home.scss */
+  .home h1 {
+    padding: 0 20%;
+  }
 }

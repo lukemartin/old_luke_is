@@ -4,4 +4,4 @@ server: no
 include: js
 exclude: CNAME config.rb Gruntfile.js node_modules package.json README.md luke.is.v4.sublime-project luke.is.v4.sublime-workspace
 permalink: /blogging/:title
-paginate: 1
+paginate: 5

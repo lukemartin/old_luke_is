@@ -6,13 +6,33 @@ figure {
 		max-width: 100%;
 	}
 	figcaption {
+		font-size: 1.4rem;
 		text-align: left;
 	}
 
 	&.full {
+		margin-left: -$body-padding-x - 0.5;
+		width: ($body-padding-x * 2) + 1 + 100%;
+
 		img {
-			margin-left: -$body-padding - 0.5;
-			max-width: ($body-padding * 2) + 1 + 100%;
+			width: 100%;
+		}
+		figcaption {
+			padding: 0 $body-padding-x;
+		}
+	}
+}
+
+@include breakpoint($bp1) {
+	figure {
+		&.full {
+			margin-left: 0;
+			max-width: 100%;
+			width: auto;
+
+			figcaption {
+				padding: 0;
+			}
 		}
 	}
 }

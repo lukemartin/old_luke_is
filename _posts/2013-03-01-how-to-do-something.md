@@ -1,6 +1,6 @@
 ---
 layout: main
-title: Something
+title: How to do Something
 ---
 
 # Yeah :D

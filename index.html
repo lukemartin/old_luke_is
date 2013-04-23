@@ -1,6 +1,7 @@
 ---
 layout: main
 title: main
+body-class: home
 ---
 
 <h1>
@@ -9,30 +10,34 @@ title: main
 	My name is Luke Martin, and I'm a freelance Front End Developer living in London.
 </h1>
 
-<h2>Recent project</h2>
-<article>
-	<figure class="full">
-		<img src="http://placekitten.com/600/250" alt="">
-	</figure>
-	<h3>Some project</h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, accusantium illo obcaecati earum tempora explicabo itaque non vero laboriosam perspiciatis sit cupiditate unde libero illum at hic veniam! Optio, porro.</p>
-</article>
-<p>
-	<a href="/projects/">More projects</a>
-</p>
-
-<h2>Recent posts</h2>
-<ul class="unstyled-list">
-	{% for post in paginator.posts %}
-	<li>
-		<span class="post-date">
-			{{ post.date | date_to_string }}
-		</span>
-		<a href="{{ post.url }}">{{ post.title }}</a>
-	</li>
-	{% endfor %}
-</ul>
-
-<p>
-	<a href="/blogging/">More posts</a>
-</p>
+<div class="column-wrap">
+	<div class="column-two-thirds">
+		<h2>Recent project</h2>
+		<article>
+			<figure class="full">
+				<img src="http://placekitten.com/600/250" alt="">
+			</figure>
+			<h3>Some project</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, accusantium illo obcaecati earum tempora explicabo itaque non vero laboriosam perspiciatis sit cupiditate unde libero illum at hic veniam! Optio, porro.</p>
+		</article>
+		<p>
+			<a href="/projects/">More projects</a>
+		</p>
+	</div>
+	<div class="column-one-third">
+		<h2>Recent posts</h2>
+		<ul class="unstyled-list">
+			{% for post in paginator.posts %}
+			<li>
+				<span class="post-date">
+					{{ post.date | date_to_string }}
+				</span>
+				<a href="{{ post.url }}">{{ post.title }}</a>
+			</li>
+			{% endfor %}
+		</ul>
+		<p>
+			<a href="/blogging/">More posts</a>
+		</p>
+	</div>
+</div>
