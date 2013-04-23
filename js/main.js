@@ -27,6 +27,7 @@ Luke.Nav = function( $, History ) {
 			e.preventDefault();
 
 			pageRequest( this.href );
+			$('#mobile-nav').attr('checked', false);
 		});
 
 		function pageRequest( url ) {

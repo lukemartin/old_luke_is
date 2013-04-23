@@ -4,7 +4,7 @@
 }
 
 @include breakpoint($bp3) {
-	.main-header,
+	.main-header-inner,
 	.content {
 		margin: 0 auto;
 		padding-left: 0;

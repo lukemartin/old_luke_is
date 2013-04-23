@@ -1,6 +1,11 @@
 .main-header {
+	//background: lighten(yellow, 40%);
 	overflow: hidden;
 	position: relative;
+
+	.main-header-inner {
+
+	}
 
 	.mobile-nav-checkbox {
 		display: none;
@@ -11,7 +16,7 @@
 		font-size: 1.4rem;
 		position: absolute;
 		right: $body-padding-x;
-		top: 36%;
+		top: 24px;
 	}
 }
 
@@ -19,8 +24,8 @@
 	@include transition(max-height 0.25s ease-in-out);
 	background-color: lighten(#000, 10%);
 	@include background-image(linear-gradient(lighten(#000, 10%), lighten(#000, 15%)));
-	border-bottom: 0px solid lighten(#000, 10%);
-	border-top: 5px solid lighten(#000, 10%);
+	//border-bottom: 0px solid lighten(#000, 10%);
+	//border-top: 5px solid lighten(#000, 10%);
 	max-height: 30rem;
 
 	ul {
