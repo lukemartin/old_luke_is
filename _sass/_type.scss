@@ -3,7 +3,7 @@
 	font-weight: 300;
 }
 @mixin header-font {
-	font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+	font-family: 'proxima-nova', 'Ubuntu', Helvetica, Arial, sans-serif;
 	font-weight: 300;
 }
 
@@ -89,7 +89,7 @@ dl {
 	}
 	dt {
 		float: left;
-		font-weight: bold;
+		font-weight: 400;
 		width: 33.33%;
 	}
 	dd {
