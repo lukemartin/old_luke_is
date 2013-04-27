@@ -8,6 +8,10 @@ module.exports = function(grunt) {
         files: '_sass/**',
         tasks: ['compass:dev']
       },
+      coffees: {
+        files: 'js/*.coffee',
+        tasks: ['coffee']
+      },
       files: {
         files: ['*.html', '*.yml', '*.md', '_posts/**', '_includes/**', '_layouts/**', 'blogging/**'],
         tasks: ['shell:jekyll']
@@ -83,6 +87,13 @@ module.exports = function(grunt) {
         },
         files: { 'css/main.min.css': ['css/lib/normalize.css', 'css/main.css'] }
       }
+    },
+    coffee: {
+      compile: {
+        files: {
+          'js/coffee.js': ['js/coffee.coffee']
+        }
+      }
     }
   });
 
@@ -92,6 +103,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
 
   // Default task(s).
   grunt.registerTask('default', ['compass:dev', 'shell:jekyll', 'watch']);
