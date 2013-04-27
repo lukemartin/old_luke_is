@@ -5,7 +5,7 @@ Luke.Nav = function( $, History ) {
 	var my = {};
 
 	my.init = function() {
-		binders();
+		//binders();
 	}
 
 	function binders() {
