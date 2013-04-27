@@ -335,3 +335,7 @@ figure.full figcaption {
     padding: 30px 20%;
   }
 }
+/* line 32, ../_sass/main.scss */
+img {
+  display: none !important;
+}

@@ -1,6 +1,10 @@
 window.L ?= {}
 
 class L.Nav
+	###
+	constructor
+	{param} Thing
+	###
 	constructor: ->
 		binders()
 
@@ -16,8 +20,7 @@ class L.Nav
 			href = this.href
 			utils = new L.Utils
 
-			if utils.externalUrl href
-				return true
+			return true if utils.externalUrl.href
 
 			e.preventDefault()
 			pageRequest href
@@ -41,4 +44,48 @@ class L.Utils
 	externalUrl: (url) ->
 		false
 
-poo = new L.Nav()
+class L.EvenHeights
+	constructor: ->
+		$('.even-heights').each (index, elem) ->
+			$elems =
+				$root: $(elem)
+				$targets: $(elem).find '.even-heights-target'
+			binders $elems
+
+	binders = ($elems) ->
+		$(window)
+			.resize ->
+				resizeHandler $elems
+			.resize()
+
+	adjustHeights = ($elems) ->
+		height = 0
+		$.each $elems, ->
+			h = $(this).outerHeight()
+			height = h if h > height
+		$.each $elems, ->
+			$(this).css 'min-height', height
+
+	resizeHandler = ($elems) ->
+		$elems.$targets.css 'min-height', 0
+		columns = getColumns $elems
+		l = $elems.$targets.length
+		num = 0
+		while num < l
+			adjustHeights $elems.$targets[num..((num+columns)-1)]
+			num += columns
+		return 'cake'
+
+	getColumns = ($elems) ->
+		cols = 0
+		offset = 0
+		$.each $elems.$targets, ->
+			o = $(this).offset().left
+			return false if o <= offset
+			offset = o
+			cols++
+		cols
+
+
+nav = new L.Nav
+eh = new L.EvenHeights

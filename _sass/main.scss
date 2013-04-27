@@ -28,3 +28,7 @@ $body-padding-x: 4%;
 
 // Home
 @import "home";
+
+img {
+	display: none !important;
+}
