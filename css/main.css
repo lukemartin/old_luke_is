@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6,
 /* line 28, ../_sass/_type.scss */
 h1,
 .h1 {
-  font-size: 3.2rem;
+  font-size: 3.9rem;
 }
 
 /* line 32, ../_sass/_type.scss */
@@ -64,7 +64,7 @@ h6,
 
 /* line 57, ../_sass/_type.scss */
 li {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.66;
 }
 /* line 62, ../_sass/_type.scss */
@@ -75,7 +75,7 @@ li > ul {
 
 /* line 67, ../_sass/_type.scss */
 p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.66;
   margin: 2rem 0;
 }
