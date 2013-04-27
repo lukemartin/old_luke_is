@@ -66,6 +66,6 @@
 
   })();
 
-  poo = new L.Nav;
+  poo = new L.Nav();
 
 }).call(this);

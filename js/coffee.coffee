@@ -41,4 +41,4 @@ class L.Utils
 	externalUrl: (url) ->
 		false
 
-poo = new L.Nav
+poo = new L.Nav()

@@ -6,16 +6,16 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: '_sass/**',
-        tasks: ['compass:dev']
+        tasks: ['compass:dev', 'copy:css']
       },
       coffees: {
         files: 'js/*.coffee',
-        tasks: ['coffee']
+        tasks: ['coffee', 'copy:js']
       },
       files: {
         files: ['*.html', '*.yml', '*.md', '_posts/**', '_includes/**', '_layouts/**', 'blogging/**'],
         tasks: ['shell:jekyll']
-      },
+      }/*,
       scripts: {
         files: 'js/*.js',
         tasks: ['copy:js']
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
       styles: {
         files: 'css/*.css',
         tasks: ['copy:css']
-      }
+      }*/
     },
     compass: {
       dev: {
