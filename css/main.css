@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6,
 /* line 28, ../_sass/_type.scss */
 h1,
 .h1 {
-  font-size: 3.9rem;
+  font-size: 3.4rem;
 }
 
 /* line 32, ../_sass/_type.scss */
@@ -56,58 +56,53 @@ h6,
 }
 
 /* line 51, ../_sass/_type.scss */
-.unstyled-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* line 57, ../_sass/_type.scss */
-li {
-  font-size: 1.8rem;
-  line-height: 1.66;
-}
-/* line 62, ../_sass/_type.scss */
-li > ol,
-li > ul {
-  margin: 0;
-}
-
-/* line 67, ../_sass/_type.scss */
 p {
   font-size: 1.8rem;
   line-height: 1.66;
   margin: 2rem 0;
 }
 
-/* line 73, ../_sass/_type.scss */
+/* line 57, ../_sass/_type.scss */
 a {
   color: #ff5a77;
   text-decoration: none;
 }
 
-/* line 78, ../_sass/_type.scss */
-.post-date {
-  font-size: 1.4rem;
+/* line 67, ../_sass/_type.scss */
+li {
+  font-size: 1.8rem;
+  line-height: 1.66;
+}
+/* line 72, ../_sass/_type.scss */
+li > ol,
+li > ul {
+  margin: 0;
 }
 
-/* line 82, ../_sass/_type.scss */
+/* line 76, ../_sass/_type.scss */
+.unstyled-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 86, ../_sass/_type.scss */
 dl {
   overflow: hidden;
 }
-/* line 85, ../_sass/_type.scss */
+/* line 89, ../_sass/_type.scss */
 dl dt, dl dd {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   line-height: 1.66;
   margin: 0;
 }
-/* line 90, ../_sass/_type.scss */
+/* line 94, ../_sass/_type.scss */
 dl dt {
   float: left;
   font-weight: 400;
   width: 33.33%;
 }
-/* line 95, ../_sass/_type.scss */
+/* line 99, ../_sass/_type.scss */
 dl dd {
   float: right;
   width: 66.66%;
@@ -179,7 +174,7 @@ dl dd {
 /* line 14, ../_sass/_header.scss */
 .main-header .mobile-nav-label {
   cursor: pointer;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   position: absolute;
   right: 4%;
   top: 24px;
@@ -206,7 +201,7 @@ dl dd {
 }
 /* line 35, ../_sass/_header.scss */
 .main-nav li {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 /* line 38, ../_sass/_header.scss */
 .main-nav a {
