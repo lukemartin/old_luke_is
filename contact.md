@@ -2,6 +2,7 @@
 layout: main
 title: contact
 permalink: /contact/
+crumb: /contactable
 ---
 
 # Contact
