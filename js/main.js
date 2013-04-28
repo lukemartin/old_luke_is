@@ -16,12 +16,12 @@ Luke.Nav = function( $, History ) {
 	function binders() {
 		History.Adapter.bind( window, 'statechange', function() {
 			var State = History.getState();
-			History.log(State.data, State.title, State.url);
+			//History.log(State.data, State.title, State.url);
 
 			$('.overlay').fadeIn(125);
 			$('#content').slideUp(500, function() {
 				$('#content').html(State.data.content).slideDown(500);
-				$('body').scrollTop(0);
+				//$('body').scrollTop(0);
 				$('.overlay').fadeOut(125);
 			});
 			$('.crumb').text(State.data.crumb);
