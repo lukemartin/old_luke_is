@@ -40,6 +40,7 @@ Luke.Nav = function( $, History ) {
 
 		function pageRequest( url ) {
 			$.get(url, function ( data ) {
+					$('.overlay').fadeIn(125);
 					populate(data, url);
 				}
 			).fail(function ( e ) {

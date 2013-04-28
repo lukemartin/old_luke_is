@@ -9,3 +9,5 @@ luke.is
 * GoSquared analytics
 * Make projects page just grid of images with nice hover effect, link to project direct for urls/trackings
   * May need to split project into includes
+* 404s
+* add canvas loader to overlay
