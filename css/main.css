@@ -68,54 +68,57 @@ a {
   text-decoration: none;
 }
 
-/* line 67, ../_sass/_type.scss */
+/* line 66, ../_sass/_type.scss */
+.dead-link {
+  color: #ff5a77;
+  text-decoration: line-through;
+}
+
+/* line 71, ../_sass/_type.scss */
 li {
   font-size: 1.8rem;
   line-height: 1.66;
 }
-/* line 72, ../_sass/_type.scss */
+/* line 76, ../_sass/_type.scss */
 li > ol,
 li > ul {
   margin: 0;
 }
 
-/* line 76, ../_sass/_type.scss */
+/* line 80, ../_sass/_type.scss */
 .unstyled-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 86, ../_sass/_type.scss */
+/* line 90, ../_sass/_type.scss */
 dl {
   overflow: hidden;
 }
-/* line 89, ../_sass/_type.scss */
+/* line 93, ../_sass/_type.scss */
 dl dt, dl dd {
+  display: inline-block;
   font-size: 1.8rem;
   line-height: 1.66;
   margin: 0;
+  word-wrap: break-word;
 }
-/* line 94, ../_sass/_type.scss */
+/* line 100, ../_sass/_type.scss */
 dl dt {
   float: left;
   font-weight: 400;
   width: 33.33%;
 }
-/* line 99, ../_sass/_type.scss */
+/* line 105, ../_sass/_type.scss */
 dl dd {
-  float: right;
+  float: left;
   width: 66.66%;
 }
 
-/* line 106, ../_sass/_type.scss */
+/* line 112, ../_sass/_type.scss */
 .recent-posts dt {
-  clear: left;
   font-weight: 200;
-}
-/* line 110, ../_sass/_type.scss */
-.recent-posts dd {
-  clear: right;
 }
 
 /* line 1, ../_sass/_layout.scss */

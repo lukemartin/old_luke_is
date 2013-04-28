@@ -63,6 +63,10 @@ a {
 		//text-decoration: underline;
 	}
 }
+.dead-link {
+	color: $brand-colour-mid;
+	text-decoration: line-through;
+}
 
 li {
 	font-size: 1.8rem;
@@ -87,9 +91,11 @@ dl {
 	overflow: hidden;
 
 	dt, dd {
+		display: inline-block;
 		font-size: 1.8rem;
 		line-height: 1.66;
 		margin: 0;
+		word-wrap: break-word;
 	}
 	dt {
 		float: left;
@@ -97,17 +103,13 @@ dl {
 		width: 33.33%;
 	}
 	dd {
-		float: right;
+		float: left;
 		width: 66.66%;
 	}
 }
 
 .recent-posts {
 	dt {
-		clear: left;
 		font-weight: 200;
-	}
-	dd {
-		clear: right;
 	}
 }
