@@ -1,9 +1,11 @@
 ---
-layout: main
+layout: blog
 title: Something
 ---
 
-# <a href="{% post_url 2013-04-22-something %}">How to do something and yeah</a>
+# <a href="{{ page.url }}">{{ page.title }}</a>
+
+<time>{{ page.date | date: '%d %B %Y'}}</time>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, fugit nisi consequatur incidunt esse. Laborum, esse, obcaecati, tempore corporis quam quo quaerat asperiores sit dolorem totam distinctio cumque expedita exercitationem!
 

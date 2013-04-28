@@ -1,9 +1,11 @@
 ---
-layout: main
+layout: blog
 title: How to do Something
 ---
 
-# Yeah :D
+# <a href="{{ page.url }}">{{ page.title }}</a>
+
+<time>{{ page.date | date: '%d %B %Y'}}</time>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, dignissimos, doloribus, iure, consequuntur aspernatur corrupti sapiente deleniti commodi minima provident aperiam officia corporis magni culpa tempora laboriosam obcaecati rerum quasi!
 

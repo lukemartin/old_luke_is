@@ -1,8 +1,10 @@
 ---
-layout: main
+layout: blog
 title: Some Interesting Post
 ---
 
-# Some sort of blog title
+# <a href="{{ page.url }}">{{ page.title }}</a>
+
+<time>{{ page.date | date: '%d %B %Y'}}</time>
 
 So I did a thing and also a cat
