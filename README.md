@@ -11,3 +11,4 @@ luke.is
   * May need to split project into includes
 * 404s
 * add canvas loader to overlay
+* organise images into common sizes & implement responsive image code
