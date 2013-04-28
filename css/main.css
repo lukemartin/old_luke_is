@@ -133,8 +133,23 @@ dl dd {
   display: none;
 }
 
+/* line 10, ../_sass/_layout.scss */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #333333;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: none;
+}
+
 @media (min-width: 980px) {
-  /* line 12, ../_sass/_layout.scss */
+  /* line 26, ../_sass/_layout.scss */
   .main-header-inner,
   .content {
     margin: 0 auto;
@@ -144,39 +159,39 @@ dl dd {
   }
 }
 @media (min-width: 800px) {
-  /* line 21, ../_sass/_layout.scss */
+  /* line 35, ../_sass/_layout.scss */
   .column-wrap {
     overflow: hidden;
   }
 
-  /* line 24, ../_sass/_layout.scss */
+  /* line 38, ../_sass/_layout.scss */
   .column-two-thirds {
     float: right;
     width: 65%;
   }
 
-  /* line 28, ../_sass/_layout.scss */
+  /* line 42, ../_sass/_layout.scss */
   .column-one-third {
     float: left;
     width: 32%;
   }
 
-  /* line 32, ../_sass/_layout.scss */
+  /* line 46, ../_sass/_layout.scss */
   .column-one-half {
     float: left;
     width: 48%;
   }
-  /* line 36, ../_sass/_layout.scss */
+  /* line 50, ../_sass/_layout.scss */
   .column-one-half:nth-child(even) {
     float: right;
   }
 
-  /* line 40, ../_sass/_layout.scss */
+  /* line 54, ../_sass/_layout.scss */
   .column-left {
     float: left;
   }
 
-  /* line 43, ../_sass/_layout.scss */
+  /* line 57, ../_sass/_layout.scss */
   .column-right {
     float: right;
   }

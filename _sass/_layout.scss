@@ -7,6 +7,20 @@
 	display: none;
 }
 
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	background-color: lighten(#000, 20%);
+	background-color: rgba(#000, 0.8);
+	z-index: 100;
+	display: none;
+}
+
 @include breakpoint(980px) {
 	.main-header-inner,
 	.content {

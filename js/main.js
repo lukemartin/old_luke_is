@@ -6,6 +6,11 @@ Luke.Nav = function( $, History ) {
 
 	my.init = function() {
 		binders();
+		buildOverlay();
+	}
+
+	function buildOverlay() {
+		$('body').append('<div class="overlay"></div>');
 	}
 
 	function binders() {
@@ -13,9 +18,11 @@ Luke.Nav = function( $, History ) {
 			var State = History.getState();
 			// History.log(State.data, State.title, State.url);
 
-			$('#content').fadeOut(125, function() {
-				$('#content').html(State.data.content).fadeIn(125);
+			$('.overlay').fadeIn(125);
+			$('#content').slideUp(500, function() {
+				$('#content').html(State.data.content).slideDown(500);
 				$('body').scrollTop(0);
+				$('.overlay').fadeOut(125);
 			});
 			$('.crumb').text(State.data.crumb);
 		});
