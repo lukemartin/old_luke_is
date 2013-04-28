@@ -2,6 +2,7 @@ luke.is
 =======
 
 # Todo
+* Organise headers & hierarchy
 * Update JS to use Coffee
 * Organise/comment SASS
 * Update grunt-generated assets to direct view-sourcers to full files
@@ -12,3 +13,4 @@ luke.is
 * 404s
 * add canvas loader to overlay
 * organise images into common sizes & implement responsive image code
+* validate html
