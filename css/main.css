@@ -108,13 +108,23 @@ dl dd {
   width: 66.66%;
 }
 
+/* line 106, ../_sass/_type.scss */
+.recent-posts dt {
+  clear: left;
+  font-weight: 200;
+}
+/* line 110, ../_sass/_type.scss */
+.recent-posts dd {
+  clear: right;
+}
+
 /* line 1, ../_sass/_layout.scss */
 .content {
   overflow: hidden;
   padding: 0 4% 100px 4%;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 980px) {
   /* line 8, ../_sass/_layout.scss */
   .main-header-inner,
   .content {
@@ -267,7 +277,7 @@ dl dd {
     background-color: transparent;
   }
 }
-@media (min-width: 960px) {
+@media (min-width: 980px) {
   /* line 94, ../_sass/_header.scss */
   .branding {
     padding-left: 0;

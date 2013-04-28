@@ -90,7 +90,7 @@
 	}
 }
 
-@include breakpoint($bp3) {
+@include breakpoint(980px) {
 	.branding {
 		padding-left: 0;
 	}

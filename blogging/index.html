@@ -7,6 +7,11 @@ title: blogging
 
 <div class="column-wrap">
 	<div class="column-two-thirds column-left">
+		{% for post in paginator.posts %}
+		<article>
+			{{ post.content | truncatewords:50 | replace_first:'h1','h2' | replace_first:'h1','h2' }}<a href="{{ post.url }}">read more</a>
+		</article>
+		{% endfor %}
 	</div>
 	<div class="column-one-third column-right">
 		{% include recent-posts.html %}
