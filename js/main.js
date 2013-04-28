@@ -16,7 +16,8 @@ Luke.Nav = function( $, History ) {
 			$('#content').fadeOut(125, function() {
 				$('#content').html(State.data.content).fadeIn(125);
 				$('body').scrollTop(0);
-			})
+			});
+			$('.crumb').text(State.data.crumb);
 		});
 
 		$('body').on('click', 'a', function( e ) {
@@ -46,9 +47,10 @@ Luke.Nav = function( $, History ) {
 
 		function populate(data, url) {
 			var title = $(data).find('.content-title').text(),
-				content = $(data).find('#content').html();
+				content = $(data).find('#content').html(),
+				crumb = $(data).find('.content-crumb').text();
 
-			History.pushState({content: content}, title, url);
+			History.pushState({content: content, crumb: crumb}, title + ' - luke.is', url);
 		}
 	}
 

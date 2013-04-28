@@ -124,8 +124,14 @@ dl dd {
   padding: 0 4% 100px 4%;
 }
 
+/* line 6, ../_sass/_layout.scss */
+.content-crumb,
+.content-title {
+  display: none;
+}
+
 @media (min-width: 980px) {
-  /* line 8, ../_sass/_layout.scss */
+  /* line 12, ../_sass/_layout.scss */
   .main-header-inner,
   .content {
     margin: 0 auto;
@@ -135,39 +141,39 @@ dl dd {
   }
 }
 @media (min-width: 800px) {
-  /* line 17, ../_sass/_layout.scss */
+  /* line 21, ../_sass/_layout.scss */
   .column-wrap {
     overflow: hidden;
   }
 
-  /* line 20, ../_sass/_layout.scss */
+  /* line 24, ../_sass/_layout.scss */
   .column-two-thirds {
     float: right;
     width: 65%;
   }
 
-  /* line 24, ../_sass/_layout.scss */
+  /* line 28, ../_sass/_layout.scss */
   .column-one-third {
     float: left;
     width: 32%;
   }
 
-  /* line 28, ../_sass/_layout.scss */
+  /* line 32, ../_sass/_layout.scss */
   .column-one-half {
     float: left;
     width: 48%;
   }
-  /* line 32, ../_sass/_layout.scss */
+  /* line 36, ../_sass/_layout.scss */
   .column-one-half:nth-child(even) {
     float: right;
   }
 
-  /* line 36, ../_sass/_layout.scss */
+  /* line 40, ../_sass/_layout.scss */
   .column-left {
     float: left;
   }
 
-  /* line 39, ../_sass/_layout.scss */
+  /* line 43, ../_sass/_layout.scss */
   .column-right {
     float: right;
   }
@@ -234,26 +240,35 @@ dl dd {
   color: #000;
   display: inline-block;
   margin: 0;
-  padding: 18px 4%;
+}
+
+/* line 58, ../_sass/_header.scss */
+.branding-wrap {
+  padding: 18px 0 18px 4%;
+}
+
+/* line 61, ../_sass/_header.scss */
+.crumb {
+  color: #ff5a77;
 }
 
 @media (min-width: 640px) {
-  /* line 61, ../_sass/_header.scss */
-  .branding {
+  /* line 66, ../_sass/_header.scss */
+  .branding-wrap {
     float: left;
   }
 
-  /* line 64, ../_sass/_header.scss */
+  /* line 69, ../_sass/_header.scss */
   .main-header .mobile-nav-label {
     display: none;
   }
 
-  /* line 67, ../_sass/_header.scss */
+  /* line 72, ../_sass/_header.scss */
   .mobile-nav-checkbox:not(:checked) ~ .main-nav {
     max-height: none;
   }
 
-  /* line 70, ../_sass/_header.scss */
+  /* line 75, ../_sass/_header.scss */
   .main-nav {
     background: none;
     border: none;
@@ -262,28 +277,28 @@ dl dd {
     margin-top: 22px;
     max-height: none;
   }
-  /* line 78, ../_sass/_header.scss */
+  /* line 83, ../_sass/_header.scss */
   .main-nav li {
     float: left;
     margin-left: 2rem;
   }
-  /* line 82, ../_sass/_header.scss */
+  /* line 87, ../_sass/_header.scss */
   .main-nav a {
     color: #000;
     padding: 0;
   }
-  /* line 86, ../_sass/_header.scss */
+  /* line 91, ../_sass/_header.scss */
   .main-nav a:active {
     background-color: transparent;
   }
 }
 @media (min-width: 980px) {
-  /* line 94, ../_sass/_header.scss */
-  .branding {
+  /* line 99, ../_sass/_header.scss */
+  .branding-wrap {
     padding-left: 0;
   }
 
-  /* line 97, ../_sass/_header.scss */
+  /* line 102, ../_sass/_header.scss */
   .main-nav {
     margin-right: 0;
   }

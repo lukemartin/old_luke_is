@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>{{ page.title }}</title>
+	<title>
+		{{ page.title }}
+		{% if page.title %}
+			-
+		{% endif %}
+		luke.is
+	</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<base href="/" />
 
@@ -22,9 +28,14 @@
 	<div class="wrap">
 		<header class="main-header">
 			<div class="main-header-inner">
-				<a href="/" class="branding h2">
-					luke<span>.is</span>
-				</a>
+				<div class="branding-wrap">
+					<a href="/" class="branding h2">
+						luke<span>.is</span>
+					</a>
+					{% if page.crumb %}
+					<span class="crumb h3">{{ page.crumb }}</span>
+					{% endif %}
+				</div>
 
 				<input type="checkbox" id="mobile-nav" class="mobile-nav-checkbox"/>
 				<label for="mobile-nav" class="mobile-nav-label">Menu</label>

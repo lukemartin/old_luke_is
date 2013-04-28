@@ -54,11 +54,16 @@
 	color: #000;
 	display: inline-block;
 	margin: 0;
-	padding: 18px $body-padding-x;
+}
+.branding-wrap {
+	padding: 18px 0 18px $body-padding-x;
+}
+.crumb {
+	color: $brand-colour-mid;
 }
 
 @include breakpoint($bp1) {
-	.branding {
+	.branding-wrap {
 		float: left;
 	}
 	.main-header .mobile-nav-label {
@@ -91,7 +96,7 @@
 }
 
 @include breakpoint(980px) {
-	.branding {
+	.branding-wrap {
 		padding-left: 0;
 	}
 	.main-nav {

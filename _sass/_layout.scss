@@ -2,6 +2,10 @@
 	overflow: hidden;
 	padding: 0 $body-padding-x 100px $body-padding-x;
 }
+.content-crumb,
+.content-title {
+	display: none;
+}
 
 @include breakpoint(980px) {
 	.main-header-inner,
