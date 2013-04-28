@@ -16,7 +16,7 @@ Luke.Nav = function( $, History ) {
 	function binders() {
 		History.Adapter.bind( window, 'statechange', function() {
 			var State = History.getState();
-			// History.log(State.data, State.title, State.url);
+			History.log(State.data, State.title, State.url);
 
 			$('.overlay').fadeIn(125);
 			$('#content').slideUp(500, function() {
@@ -34,13 +34,13 @@ Luke.Nav = function( $, History ) {
 
 			e.preventDefault();
 
-			pageRequest( this.href );
+			if (this.href !== document.location.href) pageRequest( this.href );
 			$('#mobile-nav').attr('checked', false);
 		});
 
 		function pageRequest( url ) {
+			$('.overlay').fadeIn(125);
 			$.get(url, function ( data ) {
-					$('.overlay').fadeIn(125);
 					populate(data, url);
 				}
 			).fail(function ( e ) {
