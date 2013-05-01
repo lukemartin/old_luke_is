@@ -14,3 +14,4 @@ luke.is
 * add canvas loader to overlay
 * organise images into common sizes & implement responsive image code
 * validate html
+* remove support for IE history api (hashbags are evil)
