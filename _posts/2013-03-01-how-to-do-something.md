@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: How to do Something
+category: something
 ---
 
 # <a href="{{ page.url }}">{{ page.title }}</a>

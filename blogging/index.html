@@ -15,7 +15,13 @@ crumb: /blogging
 			{% endfor %}
 	</div>
 	<div class="column-one-third column-right">
-		<p>Something here</p>
-		<p>Date {{ page.date | date: '%d %B %Y' }}</p>
+		<h3>Categories</h3>
+		<ul>
+		{% for cat in site.categories %}
+			<li>
+				<a href="/blogging/about/{{ cat[0] }}">{{ cat[0] }}</a>
+			</li>
+		{% endfor %}
+		</ul>
 	</div>
 </div>
