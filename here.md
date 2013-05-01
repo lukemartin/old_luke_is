@@ -1,8 +1,8 @@
 ---
 layout: main
 title: contact
-permalink: /contact/
-crumb: /contactable
+permalink: /here/
+crumb: /here
 ---
 
 # Contact

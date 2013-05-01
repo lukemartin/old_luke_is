@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: Something
+category: cats
 ---
 
 # <a href="{{ page.url }}">{{ page.title }}</a>

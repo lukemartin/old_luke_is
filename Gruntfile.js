@@ -19,6 +19,10 @@ module.exports = function(grunt) {
       styles: {
         files: 'css/*.css',
         tasks: ['copy:css']
+      },
+      images: {
+        files: 'images/*',
+        tasks: ['copy:images']
       }
     },
     compass: {
@@ -47,6 +51,14 @@ module.exports = function(grunt) {
         files: [
           {
             src: 'css/*',
+            dest: '_site/'
+          }
+        ]
+      },
+      images: {
+        files: [
+          {
+            src: 'images/*',
             dest: '_site/'
           }
         ]
