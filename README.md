@@ -3,7 +3,7 @@ luke.is
 
 # Todo
 * Organise headers & hierarchy
-* Update JS to use Coffee
+* ~~Update JS to use Coffee~~
 * Organise/comment SASS
 * Update grunt-generated assets to direct view-sourcers to full files
 * Organise routes/verbs
