@@ -8,4 +8,4 @@ category: something
 
 <time>{{ page.date | date: '%d %B %Y'}}</time>
 
-So I did a thing and also a cat
+So I did a thing and also hello
