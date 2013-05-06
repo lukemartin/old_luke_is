@@ -1,7 +1,8 @@
 var Luke = {};
 
-
 Luke.Nav = function( $, History ) {
+	'use strict';
+
 	var my = {};
 
 	my.init = function() {
