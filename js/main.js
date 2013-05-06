@@ -1,17 +1,35 @@
 var Luke = {};
 
-Luke.Nav = function( $, History ) {
+Luke.Nav = (function( $, History ) {
 	'use strict';
 
 	var my = {};
 
-	my.init = function() {
-		binders();
-		buildOverlay();
-	}
-
 	function buildOverlay() {
 		$('body').append('<div class="overlay"></div>');
+	}
+
+	function populate(data, url) {
+		var title = $(data).find('.content-title').text(),
+			content = $(data).find('#content').html(),
+			crumb = $(data).find('.content-crumb').text();
+
+		History.pushState({content: content, crumb: crumb}, title + ' - luke.is', url);
+	}
+
+	function pageRequest( url ) {
+		$('.overlay').fadeIn(125);
+		$.get(url, function ( data ) {
+				populate(data, url);
+			}
+		).fail(function ( e ) {
+			$.get('/404', function ( data ) {
+				// temp
+				data = '404';
+				// /temp
+				populate(data, url);
+			});
+		});
 	}
 
 	function binders() {
@@ -35,51 +53,44 @@ Luke.Nav = function( $, History ) {
 
 			e.preventDefault();
 
-			if (this.href !== document.location.href) pageRequest( this.href );
+			if (this.href !== document.location.href) {
+				pageRequest( this.href );
+			}
 			$('#mobile-nav').attr('checked', false);
 		});
-
-		function pageRequest( url ) {
-			$('.overlay').fadeIn(125);
-			$.get(url, function ( data ) {
-					populate(data, url);
-				}
-			).fail(function ( e ) {
-				$.get('/404', function ( data ) {
-					// temp
-					data = '404';
-					// /temp
-					populate(data, url);
-				});
-			});
-		}
-
-		function populate(data, url) {
-			var title = $(data).find('.content-title').text(),
-				content = $(data).find('#content').html(),
-				crumb = $(data).find('.content-crumb').text();
-
-			History.pushState({content: content, crumb: crumb}, title + ' - luke.is', url);
-		}
 	}
 
+	my.init = function() {
+		binders();
+		buildOverlay();
+	};
+
 	return my;
-}( $, window.History );
+}( $, window.History ));
 
 
-Luke.Utils = function ( $ ) {
+Luke.Utils = (function ( $ ) {
+	'use strict';
+
 	var my = {};
 
 	my.externalUrl = function( url ) {
 		var match = url.match(/^([^:\/?#]+:)?(?:\/\/([^\/?#]*))?([^?#]+)?(\?[^#]*)?(#.*)?/);
-		if (typeof match[1] === 'string' && match[1].length > 0 && match[1].toLowerCase() !== location.protocol) return true;
-		if (typeof match[2] === 'string' && match[2].length > 0 && match[2].replace(new RegExp(':('+{'http:':80,'https:':443}[location.protocol]+')?$'), '') !== location.host) return true;
+		if (typeof match[1] === 'string' && match[1].length > 0 && match[1].toLowerCase() !== location.protocol) {
+			return true;
+		}
+		if (typeof match[2] === 'string' &&
+			match[2].length > 0 &&
+			match[2].replace(new RegExp(':('+{'http:':80,'https:':443}[location.protocol]+')?$'), '') !== location.host) {
+			return true;
+		}
 		return false;
-	}
+	};
 
 	return my;
-}();
+}( $ ));
 
-;!function( Luke ) {
+(function( Luke ) {
+	'use strict';
 	Luke.Nav.init();
-}( Luke );
+}( Luke ));
