@@ -1,6 +1,11 @@
 .content {
+	@include transition(opacity 0.25s ease-in-out);
 	overflow: hidden;
 	padding: 0 $body-padding-x 100px $body-padding-x;
+
+	&.loading {
+		opacity: 0.5;
+	}
 }
 .content-crumb,
 .content-title {

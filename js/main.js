@@ -18,7 +18,8 @@ Luke.Nav = (function( $, History ) {
 	}
 
 	function pageRequest( url ) {
-		$('.overlay').fadeIn(125);
+		//$('.overlay').fadeIn(125);
+		$('#content').addClass('loading');
 		$.get(url, function ( data ) {
 				populate(data, url);
 			}
@@ -37,12 +38,14 @@ Luke.Nav = (function( $, History ) {
 			var State = History.getState();
 			//History.log(State.data, State.title, State.url);
 
-			$('.overlay').fadeIn(125);
-			$('#content').slideUp(500, function() {
-				$('#content').html(State.data.content).slideDown(500);
-				//$('body').scrollTop(0);
-				$('.overlay').fadeOut(125);
-			});
+			// $('.overlay').fadeIn(125);
+			// $('#content').slideUp(500, function() {
+			// 	$('#content').html(State.data.content).slideDown(500);
+			// 	//$('body').scrollTop(0);
+			// 	$('.overlay').fadeOut(125);
+			// });
+			$('#content').html(State.data.content);
+			$('#content').removeClass('loading');
 			$('.crumb').text(State.data.crumb);
 		});
 
