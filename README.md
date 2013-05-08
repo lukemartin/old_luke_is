@@ -15,5 +15,5 @@ luke.is
 * organise images into common sizes & implement responsive image code
 * validate html
 * categories
-* remove support for IE history api (hashbangs are evil)
+* ~~remove support for IE history api (hashbangs are evil)~~
 * add HTML5 shim for ie8
