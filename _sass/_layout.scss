@@ -105,9 +105,13 @@
 		.project-thumb-title {
 			@include transition(all 0.15s ease-in-out);
 			display: block;
-			top: 40%;
+			top: 30%;
 			opacity: 1;
 			//color: #fff;
+
+			@include breakpoint($bp1) {
+				top: 40%;
+			}
 		}
 	}
 }

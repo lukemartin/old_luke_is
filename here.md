@@ -1,6 +1,6 @@
 ---
 layout: main
-title: contact
+title: Contact
 permalink: /here/
 crumb: /here
 ---

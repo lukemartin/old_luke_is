@@ -19,6 +19,7 @@ Luke.Nav = (function( $, History ) {
 		} else {
 			History.pushState({content: content, crumb: crumb}, title + ' - luke.is', url);
 		}
+		// GoSquared.DefaultTracker.TrackView();
 	}
 
 	function pageRequest( url ) {
