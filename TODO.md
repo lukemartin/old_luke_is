@@ -17,3 +17,5 @@ TODO
 * ~~remove support for IE history api (hashbangs are evil)~~
 * ~~add HTML5 shim for ie8~~
 * add arrows on projects to paginate
+* made h1s accessible and use crumb as visual page header
+* blog index/category index should just list, instead of showing excerpt
