@@ -81,6 +81,7 @@ module.exports = function(grunt) {
       my_target: {
         files: {
           'js/main.min.js': [
+            'js/css3-mediaqueries.js',
             'js/jquery-2.0.0.js',
             'js/jquery.history.js',
             'js/main.js'
