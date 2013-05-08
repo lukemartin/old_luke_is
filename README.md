@@ -16,3 +16,4 @@ luke.is
 * validate html
 * categories
 * remove support for IE history api (hashbangs are evil)
+* add HTML5 shim for ie8
