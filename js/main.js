@@ -23,7 +23,7 @@ Luke.Nav = (function( $, History ) {
 
 	function pageRequest( url ) {
 		//$('.overlay').fadeIn(125);
-		$('#content').addClass('loading');
+		// $('#content').addClass('loading');
 		$.get(url, function ( data ) {
 				populate(data, url);
 			}
@@ -48,8 +48,12 @@ Luke.Nav = (function( $, History ) {
 			// 	//$('body').scrollTop(0);
 			// 	$('.overlay').fadeOut(125);
 			// });
-			$('#content').html(State.data.content);
-			$('#content').removeClass('loading');
+			$('#content').fadeOut(125, function() {
+				$(this).html(State.data.content).fadeIn(125);
+				$(window).scrollTop(0);
+			});
+			// $('#content').removeClass('loading');
+
 			$('.crumb').text(State.data.crumb);
 		});
 
