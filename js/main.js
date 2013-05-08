@@ -9,12 +9,16 @@ Luke.Nav = (function( $, History ) {
 		$('body').append('<div class="overlay"></div>');
 	}
 
-	function populate(data, url) {
+	function populate(data, url, replace) {
 		var title = $(data).find('.content-title').text(),
 			content = $(data).find('#content').html(),
 			crumb = $(data).find('.content-crumb').text();
 
-		History.pushState({content: content, crumb: crumb}, title + ' - luke.is', url);
+		if (replace) {
+			History.replaceState({content: content, crumb: crumb}, title + ' - luke.is', url);
+		} else {
+			History.pushState({content: content, crumb: crumb}, title + ' - luke.is', url);
+		}
 	}
 
 	function pageRequest( url ) {
@@ -66,6 +70,7 @@ Luke.Nav = (function( $, History ) {
 	my.init = function() {
 		binders();
 		buildOverlay();
+		populate($('html').html(), document.location.href, true);
 	};
 
 	return my;
