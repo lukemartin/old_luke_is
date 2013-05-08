@@ -76,7 +76,7 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-        banner: '/*! [grunt] <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+          banner: '/*!*/\n\/*!\t[grunt] <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n/*!\tView uncompressed scripts here: https://github.com/lukemartin/lukemartin.github.com/tree/master/js */\n/*!*/\n\n'
       },
       my_target: {
         files: {
@@ -91,7 +91,7 @@ module.exports = function(grunt) {
     cssmin: {
       with_banner: {
         options: {
-          banner: '/*! [grunt] <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+          banner: '/*!*/\n\/*!\t[grunt] <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n/*!\tView uncompressed styles here: https://github.com/lukemartin/lukemartin.github.com/tree/master/_sass */\n/*!*/\n'
         },
         files: { 'css/main.min.css': ['css/lib/normalize.css', 'css/main.css'] }
       }
