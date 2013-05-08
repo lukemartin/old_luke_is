@@ -11,9 +11,9 @@ luke.is
 * Make projects page just grid of images with nice hover effect, link to project direct for urls/trackings
   * May need to split project into includes
 * 404s
-* add canvas loader to overlay
+* ~~add canvas loader to overlay~~
 * organise images into common sizes & implement responsive image code
 * validate html
-* categories
+* ~~categories~~
 * ~~remove support for IE history api (hashbangs are evil)~~
 * ~~add HTML5 shim for ie8~~
