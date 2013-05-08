@@ -17,3 +17,4 @@ luke.is
 * ~~categories~~
 * ~~remove support for IE history api (hashbangs are evil)~~
 * ~~add HTML5 shim for ie8~~
+* add arrows on projects to paginate
