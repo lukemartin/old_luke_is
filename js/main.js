@@ -15,11 +15,13 @@ Luke.Nav = (function( $, History ) {
 			crumb = $(data).find('.content-crumb').text();
 
 		if (replace) {
-			History.replaceState({content: content, crumb: crumb}, title + ' - luke.is', url);
+			History.replaceState({content: content, crumb: crumb}, title + ' – luke.is', url);
 		} else {
-			History.pushState({content: content, crumb: crumb}, title + ' - luke.is', url);
+			History.pushState({content: content, crumb: crumb}, title + ' – luke.is', url);
 		}
-		// GoSquared.DefaultTracker.TrackView();
+		if (typeof GoSquared !== 'undefined') {
+			GoSquared.DefaultTracker.TrackView();
+		}
 	}
 
 	function pageRequest( url ) {
