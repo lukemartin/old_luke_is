@@ -107,5 +107,5 @@ Luke.Utils = (function ( $ ) {
 
 (function( Luke ) {
 	'use strict';
-	Luke.Nav.init();
+	//Luke.Nav.init();
 }( Luke ));
