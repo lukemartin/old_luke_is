@@ -22,3 +22,5 @@ TODO
 * browser testing.
 * [detect ie](http://stackoverflow.com/questions/4169160/javascript-ie-detection-why-not-use-simple-conditional-comments)
 * add RSS
+* define installation procedure
+** clone, npm install, npm install -g grunt-cli, install ruby, install rubygems, gem install compass, gem install breakpoint
