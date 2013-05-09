@@ -21,3 +21,4 @@ TODO
 * blog index/category index should just list, instead of showing excerpt
 * browser testing.
 * [detect ie](http://stackoverflow.com/questions/4169160/javascript-ie-detection-why-not-use-simple-conditional-comments)
+* add RSS
