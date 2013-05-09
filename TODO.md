@@ -19,3 +19,5 @@ TODO
 * add arrows on projects to paginate
 * made h1s accessible and use crumb as visual page header
 * blog index/category index should just list, instead of showing excerpt
+* browser testing.
+* [detect ie](http://stackoverflow.com/questions/4169160/javascript-ie-detection-why-not-use-simple-conditional-comments)
