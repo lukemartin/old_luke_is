@@ -13,6 +13,7 @@ TODO
 * add RSS
 * define installation procedure
 ** clone, npm install, npm install -g grunt-cli, install ruby, install rubygems, gem install compass, gem install breakpoint
+* ajax requests with embedded gists break everything
 
 ### Done / not relevant
 * ~~404s~~

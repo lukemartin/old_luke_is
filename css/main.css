@@ -121,6 +121,18 @@ dl dd {
   font-weight: 200;
 }
 
+/* line 117, ../_sass/_type.scss */
+.gist {
+  font-size: 0.8em;
+}
+
+/* line 121, ../_sass/_type.scss */
+code {
+  color: #333333;
+  font-family: Monaco, monospace, serif;
+  font-size: 0.9em;
+}
+
 /* line 1, ../_sass/_layout.scss */
 body {
   overflow-y: scroll;
