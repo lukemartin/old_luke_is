@@ -439,4 +439,10 @@ figure.full figcaption {
     font-size: 4rem;
     padding: 30px 20%;
   }
+
+  /* line 10, ../_sass/_home.scss */
+  .lead-404 {
+    font-size: 8em;
+    text-align: center;
+  }
 }

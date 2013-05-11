@@ -4,7 +4,6 @@ TODO
 * Organise headers & hierarchy
 * Organise/comment SASS
 * Organise routes/verbs
-* 404s
 * organise images into common sizes & implement responsive image code
 * validate html
 * add arrows on projects to paginate
@@ -16,6 +15,7 @@ TODO
 ** clone, npm install, npm install -g grunt-cli, install ruby, install rubygems, gem install compass, gem install breakpoint
 
 ### Done / not relevant
+* ~~404s~~
 * ~~GoSquared analytics~~
 * ~~Update grunt-generated assets to direct view-sourcers to full files~~
 * ~~Update JS to use Coffee~~

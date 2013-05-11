@@ -15,11 +15,9 @@
 	<script src="./js/main.min.js"></script>
 	<script type="text/javascript">
 		var GoSquared = {};
-		GoSquared.load = function(theTracker){
-			if(/.dev/.test(location.hostname)) theTracker.Cancel();
-		};
 		GoSquared.acct = "GSN-183620-H";
 		(function(w){
+			if(/.dev/.test(location.hostname)) return false;
 			function gs(){
 				w._gstc_lt = +new Date;
 				var d = document, g = d.createElement("script");
