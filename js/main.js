@@ -75,9 +75,11 @@ Luke.Nav = (function( $, History ) {
 	}
 
 	my.init = function() {
-		binders();
-		buildOverlay();
-		populate($('html').html(), document.location.href, true);
+		if(typeof Luke.ie === 'undefined' || Luke.ie > 9) {
+			binders();
+			//buildOverlay();
+			populate($('html').html(), document.location.href, true);
+		}
 	};
 
 	return my;
@@ -102,10 +104,26 @@ Luke.Utils = (function ( $ ) {
 		return false;
 	};
 
+	// https://gist.github.com/padolsey/527683
+	my.ie = function(){
+		var undef,
+			v = 3,
+			div = document.createElement('div'),
+			all = div.getElementsByTagName('i');
+
+		while (
+			div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
+			all[0]
+		);
+
+		return v > 4 ? v : undef;
+	}
+
 	return my;
 }( $ ));
 
 (function( Luke ) {
 	'use strict';
-	//Luke.Nav.init();
+	Luke.ie = Luke.Utils.ie();
+	Luke.Nav.init();
 }( Luke ));

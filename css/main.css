@@ -8,7 +8,7 @@ body {
   color: #000;
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 1.8rem;
 }
@@ -16,7 +16,7 @@ body {
 /* line 21, ../_sass/_type.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: 'proxima-nova', Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.3;
   margin: 2rem 0;
@@ -122,18 +122,23 @@ dl dd {
 }
 
 /* line 1, ../_sass/_layout.scss */
+body {
+  overflow-y: scroll;
+}
+
+/* line 4, ../_sass/_layout.scss */
 .content {
   overflow: hidden;
   padding: 0 4% 100px 4%;
 }
 
-/* line 11, ../_sass/_layout.scss */
+/* line 14, ../_sass/_layout.scss */
 .content-crumb,
 .content-title {
   display: none;
 }
 
-/* line 15, ../_sass/_layout.scss */
+/* line 18, ../_sass/_layout.scss */
 .overlay {
   position: fixed;
   top: 0;
@@ -149,7 +154,7 @@ dl dd {
 }
 
 @media (min-width: 980px) {
-  /* line 31, ../_sass/_layout.scss */
+  /* line 34, ../_sass/_layout.scss */
   .main-header-inner,
   .content {
     margin: 0 auto;
@@ -159,57 +164,57 @@ dl dd {
   }
 }
 @media (min-width: 800px) {
-  /* line 40, ../_sass/_layout.scss */
+  /* line 43, ../_sass/_layout.scss */
   .column-wrap {
     overflow: hidden;
   }
 
-  /* line 43, ../_sass/_layout.scss */
+  /* line 46, ../_sass/_layout.scss */
   .column-two-thirds {
     float: right;
     width: 65%;
   }
 
-  /* line 47, ../_sass/_layout.scss */
+  /* line 50, ../_sass/_layout.scss */
   .column-one-third {
     float: left;
     width: 32%;
   }
 
-  /* line 51, ../_sass/_layout.scss */
+  /* line 54, ../_sass/_layout.scss */
   .column-one-half {
     float: left;
     width: 48%;
   }
-  /* line 55, ../_sass/_layout.scss */
+  /* line 58, ../_sass/_layout.scss */
   .column-one-half:nth-child(even) {
     float: right;
   }
 
-  /* line 59, ../_sass/_layout.scss */
+  /* line 62, ../_sass/_layout.scss */
   .column-left {
     float: left;
   }
 
-  /* line 62, ../_sass/_layout.scss */
+  /* line 65, ../_sass/_layout.scss */
   .column-right {
     float: right;
   }
 }
-/* line 67, ../_sass/_layout.scss */
+/* line 70, ../_sass/_layout.scss */
 .project-thumb {
   overflow: hidden;
   position: relative;
 }
-/* line 70, ../_sass/_layout.scss */
+/* line 73, ../_sass/_layout.scss */
 .project-thumb figure {
   margin-top: 0;
 }
-/* line 73, ../_sass/_layout.scss */
+/* line 76, ../_sass/_layout.scss */
 .project-thumb a {
   display: block;
 }
-/* line 77, ../_sass/_layout.scss */
+/* line 80, ../_sass/_layout.scss */
 .project-thumb .project-thumb-title {
   position: absolute;
   width: 100%;
@@ -219,7 +224,7 @@ dl dd {
   opacity: 0;
   display: block;
 }
-/* line 88, ../_sass/_layout.scss */
+/* line 91, ../_sass/_layout.scss */
 .project-thumb:hover img {
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
@@ -228,7 +233,7 @@ dl dd {
   position: relative;
   opacity: 0.05;
 }
-/* line 92, ../_sass/_layout.scss */
+/* line 95, ../_sass/_layout.scss */
 .project-thumb:hover img:after {
   content: 'asd';
   display: block;
@@ -241,7 +246,7 @@ dl dd {
   height: 100%;
   background: red;
 }
-/* line 105, ../_sass/_layout.scss */
+/* line 108, ../_sass/_layout.scss */
 .project-thumb:hover .project-thumb-title {
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
@@ -252,7 +257,7 @@ dl dd {
   opacity: 1;
 }
 @media (min-width: 640px) {
-  /* line 105, ../_sass/_layout.scss */
+  /* line 108, ../_sass/_layout.scss */
   .project-thumb:hover .project-thumb-title {
     top: 40%;
   }

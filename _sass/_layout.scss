@@ -1,3 +1,6 @@
+body {
+	overflow-y: scroll;
+}
 .content {
 	// @include transition(opacity 0.25s ease-in-out);
 	overflow: hidden;
