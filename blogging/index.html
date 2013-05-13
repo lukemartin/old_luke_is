@@ -8,11 +8,13 @@ crumb: /blogging
 
 <div class="column-wrap">
 	<div class="column-two-thirds column-left">
-		{% for post in paginator.posts %}
-			<article>
-			{{ post.content | truncatewords:50 | replace_first:'h1','h2' | replace_first:'h1','h2' }}<a href="{{ post.url }}/">read more</a>
+		<article>
+			<h2 id='id2'><a href='/blogging/nginx-virtual-host-generator/'>nginx virtual host generator</a></h2> <p><a href='https://gist.github.com/lukemartin/5560855'>Here&#8217;s</a> a quick bash script to generate and symlink a new virtual host for nginx. Pretty simple stuff, but I find myself doing this quite often so just wanted a quicker way.</p> <p><code>NGINXSA</code> &amp; <code>NGINXSE</code> should be modified to point to your nginx...<a href="/blogging/nginx-virtual-host-generator/">read more</a>
 			</article>
-		{% endfor %}
+
+			<article>
+			<h2 id='id1'><a href='/blogging/v4/'>luke.is v4 released</a></h2> <p>&#8230;kinda. So I&#8217;ve just released version 4 of my personal site. It&#8217;s far from complete (more on that in a bit), but it&#8217;s a decent enough starting point.</p> <p>The site is hosted on <a href='https://github.com/lukemartin/lukemartin.github.com/'>github</a>, generated using <a href='https://github.com/mojombo/jekyll'>Jekyll</a>, written (mostly) in Markdown, CSS is...<a href="/blogging/v4/">read more</a>
+			</article>
 	</div>
 	<div class="column-one-third column-right">
 		<!--
