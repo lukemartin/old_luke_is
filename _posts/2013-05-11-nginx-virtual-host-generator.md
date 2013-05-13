@@ -17,4 +17,4 @@ Put the script into <code>/bin</code> and run it like so:
 # eg.
 $ sudo nvhgen cats.com /home/me/sites/cats/www</code></pre>
 
-Full script on [GitHub](https://gist.github.com/lukemartin/5560855):
+Full script on [GitHub](https://gist.github.com/lukemartin/5560855).
