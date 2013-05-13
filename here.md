@@ -17,7 +17,7 @@ If you'd like to get in touch with me, you can do so by:
 	<dt>GitHub</dt>
 	<dd><a href="http://github.com/lukemartin">github.com/lukemartin</a></dd>
 	<dt>Stack Overflow</dt>
-	<dd><a href="http://stackoverflow.com/users/584311/luke">stackoverflow.com/users/584311/luke</a><dd>
+	<dd><a href="http://stackoverflow.com/users/584311/luke">stackoverflow.com/users/584311/luke</a></dd>
 	<dt>LinkedIn</dt>
 	<dd><a href="http://uk.linkedin.com/in/lukeis/">uk.linkedin.com/in/lukeis</a></dd>
 	<dt>last.fm</dt>
