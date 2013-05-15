@@ -1,6 +1,4 @@
-url: http://lukemartin.github.io
-auto: no
-server: no
+baseurl: http://luke.is
 include: js
 exclude: CNAME config.rb Gruntfile.js node_modules package.json README.md luke.is.v4.sublime-project luke.is.v4.sublime-workspace
 permalink: /blogging/:title
