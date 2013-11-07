@@ -133,25 +133,24 @@ code {
   font-size: 0.9em;
 }
 
-/* Test */
-/* line 2, ../_sass/_layout.scss */
+/* line 1, ../_sass/_layout.scss */
 body {
   overflow-y: scroll;
 }
 
-/* line 5, ../_sass/_layout.scss */
+/* line 4, ../_sass/_layout.scss */
 .content {
   overflow: hidden;
   padding: 0 4% 100px 4%;
 }
 
-/* line 15, ../_sass/_layout.scss */
+/* line 14, ../_sass/_layout.scss */
 .content-crumb,
 .content-title {
   display: none;
 }
 
-/* line 19, ../_sass/_layout.scss */
+/* line 18, ../_sass/_layout.scss */
 .overlay {
   position: fixed;
   top: 0;
@@ -167,7 +166,7 @@ body {
 }
 
 @media (min-width: 980px) {
-  /* line 35, ../_sass/_layout.scss */
+  /* line 34, ../_sass/_layout.scss */
   .main-header-inner,
   .content {
     margin: 0 auto;
@@ -177,57 +176,57 @@ body {
   }
 }
 @media (min-width: 800px) {
-  /* line 44, ../_sass/_layout.scss */
+  /* line 43, ../_sass/_layout.scss */
   .column-wrap {
     overflow: hidden;
   }
 
-  /* line 47, ../_sass/_layout.scss */
+  /* line 46, ../_sass/_layout.scss */
   .column-two-thirds {
     float: right;
     width: 65%;
   }
 
-  /* line 51, ../_sass/_layout.scss */
+  /* line 50, ../_sass/_layout.scss */
   .column-one-third {
     float: left;
     width: 32%;
   }
 
-  /* line 55, ../_sass/_layout.scss */
+  /* line 54, ../_sass/_layout.scss */
   .column-one-half {
     float: left;
     width: 48%;
   }
-  /* line 59, ../_sass/_layout.scss */
+  /* line 58, ../_sass/_layout.scss */
   .column-one-half:nth-child(even) {
     float: right;
   }
 
-  /* line 63, ../_sass/_layout.scss */
+  /* line 62, ../_sass/_layout.scss */
   .column-left {
     float: left;
   }
 
-  /* line 66, ../_sass/_layout.scss */
+  /* line 65, ../_sass/_layout.scss */
   .column-right {
     float: right;
   }
 }
-/* line 71, ../_sass/_layout.scss */
+/* line 70, ../_sass/_layout.scss */
 .project-thumb {
   overflow: hidden;
   position: relative;
 }
-/* line 74, ../_sass/_layout.scss */
+/* line 73, ../_sass/_layout.scss */
 .project-thumb figure {
   margin-top: 0;
 }
-/* line 77, ../_sass/_layout.scss */
+/* line 76, ../_sass/_layout.scss */
 .project-thumb a {
   display: block;
 }
-/* line 81, ../_sass/_layout.scss */
+/* line 80, ../_sass/_layout.scss */
 .project-thumb .project-thumb-title {
   position: absolute;
   width: 100%;
@@ -237,7 +236,7 @@ body {
   opacity: 0;
   display: block;
 }
-/* line 92, ../_sass/_layout.scss */
+/* line 91, ../_sass/_layout.scss */
 .project-thumb:hover img {
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
@@ -246,7 +245,7 @@ body {
   position: relative;
   opacity: 0.05;
 }
-/* line 96, ../_sass/_layout.scss */
+/* line 95, ../_sass/_layout.scss */
 .project-thumb:hover img:after {
   content: 'asd';
   display: block;
@@ -259,7 +258,7 @@ body {
   height: 100%;
   background: red;
 }
-/* line 109, ../_sass/_layout.scss */
+/* line 108, ../_sass/_layout.scss */
 .project-thumb:hover .project-thumb-title {
   -webkit-transition: all 0.15s ease-in-out;
   -moz-transition: all 0.15s ease-in-out;
@@ -270,7 +269,7 @@ body {
   opacity: 1;
 }
 @media (min-width: 640px) {
-  /* line 109, ../_sass/_layout.scss */
+  /* line 108, ../_sass/_layout.scss */
   .project-thumb:hover .project-thumb-title {
     top: 40%;
   }
