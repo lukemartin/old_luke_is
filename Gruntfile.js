@@ -66,7 +66,7 @@ module.exports = function(grunt) {
     },
     shell: {
       jekyll: {
-          command: 'rm -rf _site/*; jekyll build --baseurl http://luke.is.dev',
+          command: 'rm -rf _site/*; jekyll build',
           stdout: true
       },
       jekyll_deploy: {
