@@ -3,4 +3,48 @@
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
 
+body {
+  overflow-y: visible;
+  overflow-x: hidden;
+}
 
+
+.image {
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  &.image-rounded {
+    border-radius: 50%;
+  }
+
+  &.image-bordered {
+    border: 5px solid #fff;
+  }
+}
+
+
+.header-wrap {
+  background: #fff url(/images/header-bg.jpg) no-repeat center center;
+  overflow: hidden;
+  width: 100%;
+
+  header {
+    min-height: 568px;
+    position: relative;
+  }
+}
+
+.branding {
+  position: relative;
+}
+
+.avatar {
+  margin: 0 auto;
+  width: 140px;
+}
