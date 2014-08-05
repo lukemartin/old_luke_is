@@ -9,6 +9,18 @@ body {
 }
 
 
+body {
+  font-family: "proxima-nova", sans-serif;
+  letter-spacing: 2px;
+}
+.hN {
+  font-weight: 200;
+}
+.h3 {
+  font-size: 30px;
+}
+
+
 .image {
   display: block;
   overflow: hidden;
@@ -42,9 +54,15 @@ body {
 
 .branding {
   position: relative;
-}
 
-.avatar {
-  margin: 0 auto;
-  width: 140px;
+  .avatar {
+    margin: 0 auto;
+    width: 140px;
+  }
+
+  .name {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+  }
 }
