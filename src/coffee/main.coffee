@@ -19,8 +19,18 @@ $.fn.extend
     return $(window).resize(=>
       return @each ()->
         wh = $(window).outerHeight()
-        h  = $(this).outerHeight()
         $(this).css('height', wh)
     ).resize()
 
 $('.js-max-height').maxHeight()
+
+
+$.fn.extend
+  marginTop: (options) ->
+    return $(window).resize(=>
+      return @each ()->
+        wh = $(window).outerHeight()
+        $(this).css('top', wh)
+    ).resize()
+
+$('.js-margin-top').marginTop()

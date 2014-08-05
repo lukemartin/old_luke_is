@@ -44,6 +44,7 @@ body {
 .header-wrap {
   background: #fff url(/images/header-bg.jpg) no-repeat center center;
   overflow: hidden;
+  position: fixed;
   width: 100%;
 
   header {
@@ -78,4 +79,9 @@ body {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+.content-wrap {
+  background-color: #fff;
+  position: relative;
 }
