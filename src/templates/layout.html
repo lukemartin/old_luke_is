@@ -13,7 +13,10 @@
   <!-- Styles -->
   <link rel="stylesheet" href="/styles/main.css">
 </head>
+
 <body>
+
+  <!--{{ page.metadata.something }}-->
 
   <div class="header-wrap js-max-height">
     <header>
@@ -37,14 +40,25 @@
     </header>
   </div>
 
-  <div class="content-wrap js-margin-top" style="height: 2000px">
-    <aside class="sidebar">
-      Something
-    </aside>
-
+  <div class="content-wrap js-margin-top-NOPE">
     <div class="content">
+      <div class="section-wrap">
+        <section id="about">
+          <h1>About</h1>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur vitae est distinctio, corporis libero. Natus error illum totam unde magnam cumque facilis provident, enim possimus dignissimos mollitia, quam fuga suscipit.
+        </section>
+      </div>
+
+      <div class="section-wrap alt">
+        <section id="projects">
+          <h1>Projects</h1>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur vitae est distinctio, corporis libero. Natus error illum totam unde magnam cumque facilis provident, enim possimus dignissimos mollitia, quam fuga suscipit.
+        </section>
+      </div>
+      <!--
       {% block content %}
       {% endblock %}
+      -->
     </div>
   </div>
 
