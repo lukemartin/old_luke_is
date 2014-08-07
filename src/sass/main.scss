@@ -114,12 +114,14 @@ a {
     margin-top: 10px;
     -webkit-animation: name 0.6s cubic-bezier(0.7,0,0.3,1);
     text-transform: lowercase;
+
     span {
       display: none;
     }
   }
 }
 
+// TODO: Tidy this up
 @-webkit-keyframes avatar {
   from {
     opacity: 0;
