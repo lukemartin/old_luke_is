@@ -4,7 +4,7 @@
 }
 
 body {
-  overflow-y: visible;
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 
@@ -208,5 +208,10 @@ a {
 
   &.alt {
     background-color: lighten(#90825d, 50%);
+  }
+
+  section {
+    margin: 0 auto;
+    max-width: 900px;
   }
 }

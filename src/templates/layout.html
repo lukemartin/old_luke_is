@@ -3,7 +3,7 @@
 <head>
   <!-- Typekit -->
   <script type="text/javascript" src="//use.typekit.net/sjc8avb.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
   <!-- Meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -18,18 +18,18 @@
 
   <!--{{ page.metadata.something }}-->
 
-  <div class="header-wrap js-max-height">
+  <div class="header-wrap {% if page.metadata.heroHeader %}js-max-height{% endif %}">
     <header>
       <div class="header-inner js-middle-align">
-        <div class="branding">
+        <a href="/" class="branding">
           <div class="avatar image image-rounded image-bordered">
             <img src="/images/avatar.jpg" />
           </div>
           <div class="name hN h3">Some<span> </span>Name</div>
-        </div>
+        </a>
         <nav class="main-nav">
           <ul class="unstyled">
-            <li><a href="#">About</a></li>
+            <li><a href="/about">About</a></li>
             <li><a href="#">Projects</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Blog</a></li>
@@ -40,27 +40,15 @@
     </header>
   </div>
 
+  {% if page.metadata.heroHeader %}
+  {% else %}
   <div class="content-wrap js-margin-top-NOPE">
     <div class="content">
-      <div class="section-wrap">
-        <section id="about">
-          <h1>About</h1>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur vitae est distinctio, corporis libero. Natus error illum totam unde magnam cumque facilis provident, enim possimus dignissimos mollitia, quam fuga suscipit.
-        </section>
-      </div>
-
-      <div class="section-wrap alt">
-        <section id="projects">
-          <h1>Projects</h1>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur vitae est distinctio, corporis libero. Natus error illum totam unde magnam cumque facilis provident, enim possimus dignissimos mollitia, quam fuga suscipit.
-        </section>
-      </div>
-      <!--
       {% block content %}
       {% endblock %}
-      -->
     </div>
   </div>
+  {% endif %}
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>

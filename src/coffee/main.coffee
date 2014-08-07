@@ -5,15 +5,13 @@ $.fn.extend
   middleAlign: (options) ->
     return $(window).resize(=>
       return @each ()->
-        wh = $('header').outerHeight()
+        wh = $('.header-wrap').outerHeight()
         h  = $(this).outerHeight()
         if wh > h then $(this).css('top', (wh-h) / 2)
     ).resize()
 
 $('.js-middle-align').middleAlign()
 
-
-###
 $.fn.extend
   maxHeight: (options) ->
     return $(window).resize(=>
@@ -47,5 +45,4 @@ $.fn.extend
         $('.js-middle-align').animate({ top: newTop }, 150)
         $('.js-max-height').animate({ height: 300 }, 150)
       )
-$('.main-nav').navLinks()
-###
+# $('.main-nav').navLinks()
