@@ -16,8 +16,6 @@
 
 <body>
 
-  <!--{{ page.metadata.something }}-->
-
   <div class="header-wrap {% if page.metadata.heroHeader %}js-max-height{% endif %}">
     <header>
       <div class="header-inner js-middle-align">
@@ -30,7 +28,7 @@
         <nav class="main-nav">
           <ul class="unstyled">
             <li><a href="/about">About</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="/projects">Projects</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">Blog</a></li>
           </ul>
@@ -40,8 +38,7 @@
     </header>
   </div>
 
-  {% if page.metadata.heroHeader %}
-  {% else %}
+  {% if not page.metadata.heroHeader %}
   <div class="content-wrap js-margin-top-NOPE">
     <div id="content" class="content">
       {% block content %}

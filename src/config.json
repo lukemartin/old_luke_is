@@ -6,7 +6,8 @@
     "description": ""
   },
   "plugins": [
-    "wintersmith-nunjucks"
+    "wintersmith-nunjucks",
+    "./plugins/contentHelpers.js"
   ],
   "require": {
     "moment": "moment",

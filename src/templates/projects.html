@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{# https://github.com/davidtucker/davidtucker-blog/blob/develop/templates/articles.html #}
+{% block content %}
+  <div class="section-wrap">
+    <section id="projects">
+
+      <ul class="projects unstyled">
+        {% set projects = env.helpers.getSortedContentFolder("projects", contents) %}
+        {% for project in projects %}
+        <li class="project">
+          <div class="project-meta">
+            <h2>{{ project.metadata.title }}</h2>
+            <time datetime="{{ project.metadata.date }}">{{ project.metadata.date }}</time>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor maxime porro dicta placeat esse delectus nostrum nemo magni.
+            </p>
+            <p>
+              <a href="{{ project.url }}">Read more</a>
+            </p>
+          </div>
+          <div class="project-image">
+            <a href="#" class="image">
+              <img src="http://placekitten.com/300/150" alt="Project Name">
+            </a>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+
+    </section>
+  </div>
+{% endblock %}

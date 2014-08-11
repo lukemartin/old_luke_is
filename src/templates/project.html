@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <div class="section-wrap">
+    <section id="projects">
+
+      <ul class="projects unstyled">
+        <li class="project">
+          <div class="project-meta">
+            <h2>{{ page.metadata.title }}</h2>
+            <time datetime="{{ page.metadata.date }}">{{ page.metadata.date }}</time>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor maxime porro dicta placeat esse delectus nostrum nemo magni.
+            </p>
+            <p>
+              <a href="#">Read more</a>
+            </p>
+          </div>
+          <div class="project-image">
+            <a href="#" class="image">
+              <img src="http://placekitten.com/300/150" alt="Project Name">
+            </a>
+          </div>
+        </li>
+      </ul>
+
+    </section>
+  </div>
+{% endblock %}
