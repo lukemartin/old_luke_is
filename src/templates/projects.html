@@ -12,18 +12,18 @@
         {% for project in projects %}
         <li class="project">
           <div class="project-image">
-            <a href="{{ project.url }}" class="image">
+            <a href="{{ project.url }}" class="image" data-history>
               <img src="{{ project.metadata.image }}" alt="{{ project.metadata.title }}">
             </a>
           </div>
           <div class="project-meta">
-            <h2 class="hN"><a href="{{ project.url }}">{{ project.metadata.title }}</a></h2>
+            <h2 class="hN"><a href="{{ project.url }}" data-history>{{ project.metadata.title }}</a></h2>
             <time datetime="{{ moment(project.metadata.date).format('MMMM YYYY') }}">{{ moment(project.metadata.date).format('MMMM YYYY') }}</time>
             <p>
               {{ project.metadata.short }}
             </p>
             <p>
-              <a href="{{ project.url }}">Read more</a>
+              <a href="{{ project.url }}" data-history>Read more</a>
             </p>
           </div>
         </li>

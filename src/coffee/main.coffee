@@ -46,3 +46,24 @@ $.fn.extend
         $('.js-max-height').animate({ height: 300 }, 150)
       )
 # $('.main-nav').navLinks()
+
+$.fn.extend
+  ajaxLoader: (options) ->
+
+    binders = ->
+      $('[data-history]').on('click touchstart', linkClicked)
+
+    getLevel = (url) -> return url.split('/').length - 1
+
+    linkClicked = (e) ->
+      e.preventDefault();
+      href = $(e.currentTarget).attr('href');
+      level = getLevel(href)
+      console.log level
+
+
+    currentLevel = getLevel(document.location.pathname)
+    console.log currentLevel
+    binders();
+
+$('body').ajaxLoader();
