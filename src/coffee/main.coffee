@@ -66,4 +66,4 @@ $.fn.extend
     console.log currentLevel
     binders();
 
-$('body').ajaxLoader();
+# $('body').ajaxLoader();
