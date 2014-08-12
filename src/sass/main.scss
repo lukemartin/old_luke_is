@@ -34,12 +34,33 @@ body {
   letter-spacing: 2px;
 }
 
-.hN {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
   font-weight: 200;
   margin-top: 0;
 }
-.h3 {
-  font-size: 30px;
+
+h1, .h1 {
+  font-size: 40px;
+}
+h2, .h2 {
+  font-size: 32px;
+}
+h3, .h3 {
+  font-size: 28px;
+}
+h4, .h4 {
+  font-size: 24px;
+}
+h5, .h5 {
+  font-size: 16px;
+}
+h6, .h6 {
+  font-size: 16px;
 }
 
 ul, ol {
@@ -67,8 +88,8 @@ a {
   margin-bottom: 10px;
   display: block;
   overflow: hidden;
-  margin-left: -2%;
-  width: 104%;
+  margin-left: -4%;
+  width: 108%;
 
   img {
     display: block;
@@ -271,7 +292,7 @@ body {
 
 .section-wrap {
   background-color: #fff;
-  padding: 2%;
+  padding: 4%;
 
   &.alt {
     background-color: lighten(#90825d, 50%);
@@ -296,6 +317,14 @@ body {
     .project-image {
       .image {
         //width: 100%;
+      }
+    }
+    .project-meta {
+      .project-title {
+        margin-bottom: 0;
+      }
+      .project-date {
+
       }
     }
   }
