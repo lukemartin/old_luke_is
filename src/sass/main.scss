@@ -344,6 +344,12 @@ body {
 .content-wrap {
   background-color: #fff;
   position: relative;
+
+  .content {
+    margin: 0 auto;
+    max-width: 768px;
+    position: relative;
+  }
 }
 
 .section-wrap {
@@ -355,8 +361,6 @@ body {
   }
 
   section {
-    margin: 0 auto;
-    max-width: 768px;
     position: relative;
   }
 }
@@ -468,4 +472,31 @@ body {
   &:hover, &:focus {
     opacity: 1;
   }
+}
+
+
+
+// ██████╗   █████╗   ██████╗  ███████╗       █████╗  ███╗   ██╗ ██╗ ███╗   ███╗  █████╗  ████████╗ ██╗  ██████╗  ███╗   ██╗
+// ██╔══██╗ ██╔══██╗ ██╔════╝  ██╔════╝      ██╔══██╗ ████╗  ██║ ██║ ████╗ ████║ ██╔══██╗ ╚══██╔══╝ ██║ ██╔═══██╗ ████╗  ██║
+// ██████╔╝ ███████║ ██║  ███╗ █████╗        ███████║ ██╔██╗ ██║ ██║ ██╔████╔██║ ███████║    ██║    ██║ ██║   ██║ ██╔██╗ ██║
+// ██╔═══╝  ██╔══██║ ██║   ██║ ██╔══╝        ██╔══██║ ██║╚██╗██║ ██║ ██║╚██╔╝██║ ██╔══██║    ██║    ██║ ██║   ██║ ██║╚██╗██║
+// ██║      ██║  ██║ ╚██████╔╝ ███████╗      ██║  ██║ ██║ ╚████║ ██║ ██║ ╚═╝ ██║ ██║  ██║    ██║    ██║ ╚██████╔╝ ██║ ╚████║
+
+.section-wrap {
+  transition: all 0.5s;
+}
+
+.anim-right {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.anim-left {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
 }

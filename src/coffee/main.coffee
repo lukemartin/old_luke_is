@@ -133,15 +133,38 @@ class PageAnimator
     $('#content').html(content)
 
   animateBackwards: (content) ->
-    $('#content').fadeOut(125, ->
-      $(this).html(content).fadeIn(125)
-    )
+    $content = $(content)
+    $content.addClass('anim-left')
+    $currentSection = $('#content .section-wrap')
+    $('#content').append($content)
+    setTimeout(->
+      $currentSection.addClass('anim-right')
+      $content.removeClass('anim-left')
+
+      setTimeout(->
+        $currentSection.remove()
+      , 2000)
+    , 50)
 
   animateForwards: (content) ->
+    $content = $(content)
+    $content.addClass('anim-right')
+    $currentSection = $('#content .section-wrap')
+    $('#content').append($content)
+    setTimeout(->
+      $currentSection.addClass('anim-left')
+      $content.removeClass('anim-right')
+
+      setTimeout(->
+        $currentSection.remove()
+      , 500)
+    , 50)
+
+    ###
     $('#content').slideUp(125, ->
       $(this).html(content).slideDown(125)
     )
-
+    ###
 
   # Private
   getLevel: (url) -> return url.split('/').length - 1
