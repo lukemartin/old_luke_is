@@ -104,13 +104,44 @@ class PageAnimator
       )
 
   onStateChange: =>
-    state = History.getState()
-    History.log('statechange:', state.data, state.title, state.url)
+    state   = History.getState()
+    level   = state.data.level
+    content = state.data.content
+    # History.log('statechange:', state.data, state.title, state.url)
 
+    if level is @currentLevel
+      @animateSibling(content)
+    if level < @currentLevel
+      @animateBackwards(content)
+    if level > @currentLevel
+      @animateForwards(content)
+
+    @currentLevel = level
+
+    ###
     $('#content').fadeOut(125, ->
       $(this).html(state.data.content).fadeIn(125)
       $(window).scrollTop(0)
     )
+    ###
+
+    ###
+    $('#content').html(state.data.content)
+    ###
+
+  animateSibling: (content) ->
+    $('#content').html(content)
+
+  animateBackwards: (content) ->
+    $('#content').fadeOut(125, ->
+      $(this).html(content).fadeIn(125)
+    )
+
+  animateForwards: (content) ->
+    $('#content').slideUp(125, ->
+      $(this).html(content).slideDown(125)
+    )
+
 
   # Private
   getLevel: (url) -> return url.split('/').length - 1
