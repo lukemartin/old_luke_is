@@ -57,16 +57,16 @@ $.fn.extend
 
     linkClicked = (e) ->
       e.preventDefault()
-      href = $(e.currentTarget).attr('href');
+      href = $(e.currentTarget).attr('href')
       level = getLevel(href)
       console.log level
 
 
     currentLevel = getLevel(document.location.pathname)
     console.log currentLevel
-    binders();
+    binders()
 
-# $('body').ajaxLoader();
+# $('body').ajaxLoader()
 
 
 
@@ -90,11 +90,11 @@ class PageAnimator
   onLinkClicked: (e) =>
     e.preventDefault()
     href  = $(e.currentTarget).attr('href')
+    title = $(e.currentTarget).attr('title') + ' - somename'
     level = @getLevel(href)
 
     $.get(href)
       .done((data) ->
-        title = 'Some Title'
         content = $(data).find('#content').html()
 
         History.pushState({ content: content, level: level }, title, href)

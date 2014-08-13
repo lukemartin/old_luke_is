@@ -1,3 +1,4 @@
 {
-  "template": "project.html"
+  "template": "project.html",
+  "title": "Here's a title"
 }
