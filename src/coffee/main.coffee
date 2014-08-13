@@ -1,5 +1,5 @@
 $ = jQuery
-
+History = window.History
 
 $.fn.extend
   middleAlign: (options) ->
@@ -56,7 +56,7 @@ $.fn.extend
     getLevel = (url) -> return url.split('/').length - 1
 
     linkClicked = (e) ->
-      e.preventDefault();
+      e.preventDefault()
       href = $(e.currentTarget).attr('href');
       level = getLevel(href)
       console.log level
@@ -67,3 +67,59 @@ $.fn.extend
     binders();
 
 # $('body').ajaxLoader();
+
+
+
+
+
+
+# PageAnimator Class
+class PageAnimator
+  defaults: {}
+
+  constructor: (el, options) ->
+    @options      = $.extend({}, @defaults, options)
+    @$el          = $(el)
+    @currentLevel = @getLevel(document.location.pathname)
+    @binders()
+
+  binders: ->
+    @$el.on('click touchstart', '[data-pa]', @onLinkClicked)
+    History.Adapter.bind(window, 'statechange', @onStateChange)
+
+  onLinkClicked: (e) =>
+    e.preventDefault()
+    href  = $(e.currentTarget).attr('href')
+    level = @getLevel(href)
+
+    $.get(href)
+      .done((data) ->
+        title = 'Some Title'
+        content = $(data).find('#content').html()
+
+        History.pushState({ content: content, level: level }, title, href)
+      )
+      .fail(->
+        console.log 'failed :('
+      )
+
+  onStateChange: =>
+    state = History.getState()
+    History.log('statechange:', state.data, state.title, state.url)
+
+    $('#content').fadeOut(125, ->
+      $(this).html(state.data.content).fadeIn(125)
+      $(window).scrollTop(0)
+    )
+
+  # Private
+  getLevel: (url) -> return url.split('/').length - 1
+
+# PageAnimator Plugin
+$.fn.extend pageAnimator: (option, args...) ->
+  @each ->
+    $this = $(this)
+    new PageAnimator(this, {})
+
+# PageAnimator Bootstrap
+$('body').pageAnimator()
