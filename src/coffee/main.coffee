@@ -84,7 +84,7 @@ class PageAnimator
     @binders()
 
   binders: ->
-    @$el.on('click touchstart', '[data-pa]', @onLinkClicked)
+    @$el.on('click', '[data-pa]', @onLinkClicked)
     History.Adapter.bind(window, 'statechange', @onStateChange)
 
   onLinkClicked: (e) =>
@@ -130,7 +130,18 @@ class PageAnimator
     ###
 
   animateSibling: (content) ->
-    $('#content').html(content)
+    $content = $(content)
+    $content.addClass('anim-up')
+    $currentSection = $('#content .section-wrap')
+    $('#content').append($content)
+    setTimeout(->
+      $currentSection.addClass('anim-down')
+      $content.removeClass('anim-up')
+
+      setTimeout(->
+        $currentSection.remove()
+      , 500)
+    , 50)
 
   animateBackwards: (content) ->
     $content = $(content)
@@ -143,7 +154,7 @@ class PageAnimator
 
       setTimeout(->
         $currentSection.remove()
-      , 2000)
+      , 500)
     , 50)
 
   animateForwards: (content) ->

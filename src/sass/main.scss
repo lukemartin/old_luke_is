@@ -175,8 +175,9 @@ a {
 .header-wrap {
   background: #fff url(/images/header-bg.jpg) no-repeat center center;
   overflow: hidden;
-  // position: fixed;
+  position: relative;
   width: 100%;
+  z-index: 2;
 
   header {
     // min-height: 568px;
@@ -496,6 +497,20 @@ body {
 .anim-left {
   opacity: 0;
   transform: translate3d(-100%, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.anim-up {
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.anim-down {
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
   position: absolute;
   top: 0;
   left: 0;
