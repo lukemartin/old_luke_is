@@ -8,6 +8,53 @@ $bp: 600px;
 
 
 
+// ███████╗  ██████╗  ███╗   ██╗ ████████╗ ███████╗
+// ██╔════╝ ██╔═══██╗ ████╗  ██║ ╚══██╔══╝ ██╔════╝
+// █████╗   ██║   ██║ ██╔██╗ ██║    ██║    ███████╗
+// ██╔══╝   ██║   ██║ ██║╚██╗██║    ██║    ╚════██║
+// ██║      ╚██████╔╝ ██║ ╚████║    ██║    ███████║
+
+@font-face {
+  font-family: 'lm';
+  src:url('/fonts/lm.eot?x08t0v');
+  src:url('/fonts/lm.eot?#iefixx08t0v') format('embedded-opentype'),
+    url('/fonts/lm.woff?x08t0v') format('woff'),
+    url('/fonts/lm.ttf?x08t0v') format('truetype'),
+    url('/fonts/lm.svg?x08t0v#lm') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'lm';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-up:before {
+  content: "\e600";
+}
+.icon-arrow-right:before {
+  content: "\e601";
+}
+.icon-arrow-down:before {
+  content: "\e602";
+}
+.icon-arrow-left:before {
+  content: "\e603";
+}
+
+
+
+
 // ██████╗  ███████╗ ███████╗ ███████╗ ████████╗
 // ██╔══██╗ ██╔════╝ ██╔════╝ ██╔════╝ ╚══██╔══╝
 // ██████╔╝ █████╗   ███████╗ █████╗      ██║
@@ -107,6 +154,15 @@ a {
     padding: 5px;
   }
 }
+
+@media (min-width: $bp) {
+  .image {
+    margin-left: 0;
+    width: auto;
+    max-width: 100%;
+  }
+}
+
 
 
 
@@ -292,7 +348,7 @@ body {
 
 .section-wrap {
   background-color: #fff;
-  padding: 4%;
+  padding: 40px 4%;
 
   &.alt {
     background-color: lighten(#90825d, 50%);
@@ -301,6 +357,7 @@ body {
   section {
     margin: 0 auto;
     max-width: 768px;
+    position: relative;
   }
 }
 
@@ -314,19 +371,56 @@ body {
 
 .projects {
   .project {
+    margin-bottom: 20px;
+
     .project-image {
       .image {
         //width: 100%;
       }
+
+      &:hover {
+        & ~ .project-meta .project-read-more i {
+          margin-left: 6px;
+        }
+      }
     }
     .project-meta {
       .project-title {
-        margin-bottom: 0;
+        margin-bottom: 4px;
+
+        &:hover {
+          & ~ p .project-read-more i {
+            margin-left: 6px;
+          }
+        }
       }
       .project-date {
+        color: #999;
+      }
+      .project-read-more {
+        padding-right: 6px;
 
+        i {
+          transition: margin-left 0.2s;
+          font-size: 14px;
+        }
+
+        &:hover {
+          i {
+            margin-left: 6px;
+          }
+        }
       }
     }
+  }
+}
+
+.project-large {
+  .project-title {
+    margin-bottom: 4px;
+  }
+  .project-date {
+    color: #999;
   }
 }
 
@@ -336,10 +430,11 @@ body {
       overflow: hidden;
 
       .project-image {
-        width: 58%;
+        width: 56%;
         float: left;
 
         .image {
+          margin-left: 0;
           width: 100%;
         }
       }
@@ -348,5 +443,29 @@ body {
         float: right;
       }
     }
+  }
+}
+
+
+
+// ██████╗   █████╗   ██████╗ ██╗  ██╗        ███████╗ ██╗       ██████╗   █████╗  ████████╗ ██╗   ██╗
+// ██╔══██╗ ██╔══██╗ ██╔════╝ ██║ ██╔╝        ██╔════╝ ██║      ██╔═══██╗ ██╔══██╗ ╚══██╔══╝ ╚██╗ ██╔╝
+// ██████╔╝ ███████║ ██║      █████╔╝  █████╗ █████╗   ██║      ██║   ██║ ███████║    ██║     ╚████╔╝
+// ██╔══██╗ ██╔══██║ ██║      ██╔═██╗  ╚════╝ ██╔══╝   ██║      ██║   ██║ ██╔══██║    ██║      ╚██╔╝
+// ██████╔╝ ██║  ██║ ╚██████╗ ██║  ██╗        ██║      ███████╗ ╚██████╔╝ ██║  ██║    ██║       ██║
+
+.back-floaty {
+  position: absolute;
+  top: -26px;
+  left: 0;
+  font-size: 11px;
+  color: #fff;
+  background-color: #333;
+  padding: 4px 6px;
+  opacity: 0.2;
+  transition: opacity 0.1s;
+
+  &:hover, &:focus {
+    opacity: 1;
   }
 }
