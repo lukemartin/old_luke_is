@@ -130,21 +130,36 @@ class PageAnimator
   # Private
   getLevel: (url) -> return url.split('/').length - 1
 
+  collapseHeader: (fn) ->
+    if $('.js-max-height').length is 0
+      return fn()
+    $('.js-middle-align').animate(top: 40, 150)
+    $('.js-max-height').animate(height: 300, 150, ->
+      $(this).removeClass('js-max-height')
+      fn()
+    )
+
   animate: (content, inClass, outClass) ->
-    $newContent = $(content).addClass(inClass)
-    $currentContent = $('#content .section-wrap:first')
+    @collapseHeader(->
+      $newContent = $(content).addClass(inClass)
+      $currentContent = $('#content .section-wrap:first')
 
-    $('#content').append($newContent)
-
-    setTimeout(->
-      $currentContent.addClass(outClass)
-      $newContent.removeClass(inClass)
+      $('#content').append($newContent)
+      console.log $newContent.outerHeight()
+      $('#content').css('height', $newContent.outerHeight())
 
       setTimeout(->
-        $currentContent.remove()
-        $('html, body').animate({ scrollTop: $('#content').offset().top }, 150)
-      , 500)
-    , 50)
+        $currentContent.addClass(outClass)
+        $newContent.removeClass(inClass)
+
+        setTimeout(->
+          $currentContent.remove()
+          $('#content').css('min-height', $(window).height())
+          $('#content').css('height', 'auto')
+        , 500)
+      , 50)
+      $('html, body').animate({ scrollTop: $('#content').offset().top }, 150)
+    )
 
 
 # PageAnimator Plugin
