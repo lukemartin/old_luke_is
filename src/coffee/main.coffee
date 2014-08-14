@@ -39,11 +39,11 @@ $.fn.extend
     return @each ()->
       $(this).on('click touchstart', 'a', (e) ->
         e.preventDefault()
-        newHeight = 300
+        newHeight = 260
         top = $('.js-middle-align').css('top')
-        newTop = (300 - $('.js-middle-align').outerHeight()) / 2
+        newTop = (260 - $('.js-middle-align').outerHeight()) / 2
         $('.js-middle-align').animate({ top: newTop }, 150)
-        $('.js-max-height').animate({ height: 300 }, 150)
+        $('.js-max-height').animate({ height: 260 }, 150)
       )
 # $('.main-nav').navLinks()
 
@@ -136,8 +136,8 @@ class PageAnimator
   collapseHeader: (fn) ->
     if $('.js-max-height').length is 0
       return fn()
-    $('.js-middle-align').animate(top: 40, 150)
-    $('.js-max-height').animate(height: 300, 150, ->
+    $('.js-middle-align').animate(top: 0, 150)
+    $('.js-max-height').animate(height: 260, 150, ->
       $(this).removeClass('js-max-height')
       fn()
     )
@@ -156,11 +156,11 @@ class PageAnimator
 
         setTimeout(->
           $currentContent.remove()
-          $('#content').css('min-height', $(window).height())
+          $('#content').css('min-height', $(window).height() - 60)
           $('#content').css('height', 'auto')
         , 500)
       , 50)
-      $('html, body').animate({ scrollTop: $('#content').offset().top }, 150)
+      $('html, body').animate({ scrollTop: 204 }, 150)
     )
 
 
