@@ -118,67 +118,34 @@ class PageAnimator
 
     @currentLevel = level
 
-    ###
-    $('#content').fadeOut(125, ->
-      $(this).html(state.data.content).fadeIn(125)
-      $(window).scrollTop(0)
-    )
-    ###
-
-    ###
-    $('#content').html(state.data.content)
-    ###
-
   animateSibling: (content) ->
-    $content = $(content)
-    $content.addClass('anim-up')
-    $currentSection = $('#content .section-wrap')
-    $('#content').append($content)
-    setTimeout(->
-      $currentSection.addClass('anim-down')
-      $content.removeClass('anim-up')
-
-      setTimeout(->
-        $currentSection.remove()
-      , 500)
-    , 50)
+    @animate(content, 'anim-up', 'anim-down')
 
   animateBackwards: (content) ->
-    $content = $(content)
-    $content.addClass('anim-left')
-    $currentSection = $('#content .section-wrap')
-    $('#content').append($content)
-    setTimeout(->
-      $currentSection.addClass('anim-right')
-      $content.removeClass('anim-left')
-
-      setTimeout(->
-        $currentSection.remove()
-      , 500)
-    , 50)
+    @animate(content, 'anim-left', 'anim-right')
 
   animateForwards: (content) ->
-    $content = $(content)
-    $content.addClass('anim-right')
-    $currentSection = $('#content .section-wrap')
-    $('#content').append($content)
-    setTimeout(->
-      $currentSection.addClass('anim-left')
-      $content.removeClass('anim-right')
-
-      setTimeout(->
-        $currentSection.remove()
-      , 500)
-    , 50)
-
-    ###
-    $('#content').slideUp(125, ->
-      $(this).html(content).slideDown(125)
-    )
-    ###
+    @animate(content, 'anim-right', 'anim-left')
 
   # Private
   getLevel: (url) -> return url.split('/').length - 1
+
+  animate: (content, inClass, outClass) ->
+    $newContent = $(content).addClass(inClass)
+    $currentContent = $('#content .section-wrap:first')
+
+    $('#content').append($newContent)
+
+    setTimeout(->
+      $currentContent.addClass(outClass)
+      $newContent.removeClass(inClass)
+
+      setTimeout(->
+        $currentContent.remove()
+        $('html, body').animate({ scrollTop: $('#content').offset().top }, 150)
+      , 500)
+    , 50)
+
 
 # PageAnimator Plugin
 $.fn.extend pageAnimator: (option, args...) ->
