@@ -109,6 +109,9 @@ class PageAnimator
     content = state.data.content
     # History.log('statechange:', state.data, state.title, state.url)
 
+    unless level?
+      return window.location = state.url
+
     if level is @currentLevel
       @animateSibling(content)
     if level < @currentLevel
@@ -128,7 +131,7 @@ class PageAnimator
     @animate(content, 'anim-right', 'anim-left')
 
   # Private
-  getLevel: (url) -> return url.split('/').length - 1
+  getLevel: (url) -> return url.split('/').length - 1 || null
 
   collapseHeader: (fn) ->
     if $('.js-max-height').length is 0
