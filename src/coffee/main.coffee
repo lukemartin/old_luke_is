@@ -145,7 +145,6 @@ class PageAnimator
       $currentContent = $('#content .section-wrap:first')
 
       $('#content').append($newContent)
-      console.log $newContent.outerHeight()
       $('#content').css('height', $newContent.outerHeight())
 
       setTimeout(->
