@@ -143,7 +143,7 @@ class PageAnimator
     )
 
   animate: (content, inClass, outClass) ->
-    @collapseHeader(->
+    @collapseHeader ->
       $newContent = $(content).addClass(inClass)
       $currentContent = $('#content .section-wrap:first')
 
@@ -161,7 +161,7 @@ class PageAnimator
         , 500)
       , 50)
       $('html, body').animate({ scrollTop: 204 }, 150)
-    )
+
 
 
 # PageAnimator Plugin
