@@ -17,9 +17,9 @@
 
 <body>
 
-  <div class="header-wrap {% if page.metadata.heroHeader %}js-max-height{% endif %}">
+  <div class="header-wrap">
     <header>
-      <div class="header-inner {% if page.metadata.heroHeader %}js-middle-align{% endif %}">
+      <div class="header-inner">
         <a href="/" class="branding">
           <div class="avatar image image-rounded image-bordered">
             <img src="/images/avatar.jpg" />
@@ -39,7 +39,7 @@
     </header>
   </div>
 
-  <div class="content-wrap js-margin-top-NOPE">
+  <div class="content-wrap">
     <div id="content" class="content">
       {% block content %}
       {% endblock %}
@@ -47,6 +47,7 @@
   </div>
 
   <!-- Scripts -->
+  <script src="http://127.0.0.1:35777/livereload.js"></script>
   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="/scripts/jquery.history.min.js"></script>
   <script src="/scripts/main.js"></script>
