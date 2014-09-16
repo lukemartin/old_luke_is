@@ -4,7 +4,7 @@ class SlideyPages
     @binders()
 
   binders: ->
-    $('[data-slidey]').on('click', @onLinkClicked)
+    $('body').on('click', '[data-slidey]', @onLinkClicked)
     History.Adapter.bind(window, 'statechange', @onStateChanged)
 
   getLevel: (url) -> return url.split('/').length - 1 || null
