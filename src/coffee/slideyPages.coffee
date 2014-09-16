@@ -32,13 +32,34 @@ class SlideyPages
     content = state.data.content
     # History.log('statechange:', state.data, state.title, state.url)
 
-    @slidey(content)
+    if level is @currentLevel
+      @slideySibling(content)
+    # if level < @currentLevel
+    #   @animateBackwards(content)
+    # if level > @currentLevel
+    #   @animateForwards(content)
 
-  slidey: (content) ->
-    $('html').removeClass('hero-header')
-    $('#content').velocity(
-      { translateY: '+= 100px' }, 250, ->
-        $(this).html(content)
+  slideySibling: (content) ->
+    $newContent = $(content).css
+      opacity: 0
+      position: 'absolute'
+    $oldContent = $('#content .section-wrap:first')
+
+    $('#content').prepend($newContent)
+
+    newContentHeight = $newContent.outerHeight()
+    $newContent.velocity({ translateY: -newContentHeight }, 0, ->
+      $newContent.velocity({ translateY: 0, opacity: 1 }, 250, ->
+        $newContent.css
+          position: 'relative'
+      )
     )
+    $oldContent.velocity({ translateY: newContentHeight, opacity: 0 }, 250, ->
+      $oldContent.remove()
+    )
+    # $('#content').velocity(
+    #   { translateY: '+= 100px' }, 250, ->
+    #     $(this).html(content)
+    # )
 
 new SlideyPages()
