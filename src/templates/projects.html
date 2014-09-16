@@ -7,7 +7,7 @@
       <h1>Projects</h1>
 
       <ul class="projects unstyled">
-        {% set projects = env.helpers.getSortedContentFolder("projects", contents) %}
+        {% set projects = env.helpers.getSortedContentFolder("working", contents) %}
         {% for project in projects %}
         <li class="project">
           <div class="project-image">
