@@ -4,41 +4,15 @@
   <div class="section-wrap">
     <section class="project-page">
 
-      <a href="/projects/" class="back-floaty" title="Projects" data-pa><i class="icon-arrow-left"></i> Projects</a>
+      <a href="/projects/" class="back-floaty" title="Projects"><i class="icon-arrow-left"></i> Projects</a>
 
       <div class="project-large">
-        <h1 class="project-title">Project Title</h1>
-        <time class="project-date" datetime="_DATE_">August 2014</time>
+        <h1 class="project-title">{{ page.metadata.title }}</h1>
+        <time class="project-date" datetime="{{ moment(page.metadata.date).format('MMMM YYYY') }}">{{ moment(page.metadata.date).format('MMMM YYYY') }}</time>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium modi animi perferendis dolore officia vero quidem, voluptas distinctio alias repellat ea dolorem corrupti. Fugiat, debitis deleniti, voluptas ipsa pariatur minus!</p>
-
-        <div class="image">
-          <img src="http://placekitten.com/900/450"/>
-        </div>
+        {{ page.html }}
       </div>
 
     </section>
   </div>
 {% endblock %}
-
-
-
-
-
-{#
-{% block content %}
-  <div class="section-wrap">
-    <section id="projects">
-
-      <ul class="projects unstyled">
-        <li class="project">
-          <h1 class="hN">{{ page.metadata.title }}</h1>
-            <time datetime="{{ moment(project.metadata.date).format('MMMM YYYY') }}">{{ moment(project.metadata.date).format('MMMM YYYY') }}</time>
-          {{ page.html }}
-        </li>
-      </ul>
-
-    </section>
-  </div>
-{% endblock %}
-#}
