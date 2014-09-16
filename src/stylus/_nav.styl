@@ -1,8 +1,10 @@
 .nav-wrap
   width: 100%
+  position: relative
+  z-index: 2
 
   .main-nav
-    background-color: #efefef
+    background-color: #fffaed
     padding: 10px 0
     width: 100%
 
@@ -13,3 +15,16 @@
         display: inline
         margin: 0 5px
         text-transform: lowercase
+
+
+.hero-header
+  .nav-wrap
+    position: absolute
+    bottom: 0
+
+.nav-fixed
+  .content-wrap
+    padding-top: 40px
+  .nav-wrap
+    position: fixed
+    top: 0
