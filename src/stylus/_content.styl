@@ -1,0 +1,36 @@
+body
+  overflow-y: scroll
+  overflow-x: hidden
+
+.content-wrap
+  background-color: #fff
+  position: relative
+
+  .content
+    margin: 0 auto
+    max-width: 768px
+    position: relative
+
+.section-wrap
+  background-color: #fff
+  padding: 40px 4%
+
+  &.alt
+    background-color: lighten(#90825d, 50%)
+
+  section
+    position: relative
+
+.back-floaty
+  position: absolute
+  top: -26px
+  left: 0
+  font-size: 11px
+  color: #fff
+  background-color: #333
+  padding: 4px 6px
+  opacity: 0.2
+  transition: opacity 0.1s
+
+  &:hover, &:focus
+    opacity: 1
