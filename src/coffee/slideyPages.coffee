@@ -34,10 +34,14 @@ class SlideyPages
 
     if level is @currentLevel
       @slideySibling(content)
-    # if level < @currentLevel
-    #   @animateBackwards(content)
-    # if level > @currentLevel
-    #   @animateForwards(content)
+    if level < @currentLevel
+      @slideyBackwards(content)
+    if level > @currentLevel
+      @slideyForwards(content)
+
+    @currentLevel = level
+
+    $('html, body').animate({ scrollTop: 165 }, 150)
 
   slideySibling: (content) ->
     $newContent = $(content).css
@@ -48,6 +52,7 @@ class SlideyPages
     $('#content').prepend($newContent)
 
     newContentHeight = $newContent.outerHeight()
+
     $newContent.velocity({ translateY: -newContentHeight }, 0, ->
       $newContent.velocity({ translateY: 0, opacity: 1 }, 250, ->
         $newContent.css
@@ -57,9 +62,47 @@ class SlideyPages
     $oldContent.velocity({ translateY: newContentHeight, opacity: 0 }, 250, ->
       $oldContent.remove()
     )
-    # $('#content').velocity(
-    #   { translateY: '+= 100px' }, 250, ->
-    #     $(this).html(content)
-    # )
+
+  slideyForwards: (content) ->
+    $('html').removeClass('hero-header')
+
+    $newContent = $(content).css
+      opacity: 0
+      position: 'absolute'
+      top: 0
+    $oldContent = $('#content .section-wrap:first')
+
+    $('#content').append($newContent)
+
+    $newContent.velocity({ translateX: '100%' }, 0, ->
+      $newContent.velocity({ translateX: 0, opacity: 1 }, 250, ->
+        $newContent.css
+          position: 'relative'
+      )
+    )
+    $oldContent.velocity({ translateX: '-100%', opacity: 0 }, 250, ->
+      $oldContent.remove()
+    )
+
+  slideyBackwards: (content) ->
+    $newContent = $(content).css
+      opacity: 0
+      position: 'absolute'
+      top: 0
+    $oldContent = $('#content .section-wrap:first')
+
+    $('#content').append($newContent)
+
+    $newContent.velocity({ translateX: '-100%' }, 0, ->
+      $newContent.velocity({ translateX: 0, opacity: 1 }, 250, ->
+        $newContent.css
+          position: 'relative'
+      )
+    )
+    $oldContent.velocity({ translateX: '100%', opacity: 0 }, 250, ->
+      $oldContent.remove()
+    )
+
+
 
 new SlideyPages()
