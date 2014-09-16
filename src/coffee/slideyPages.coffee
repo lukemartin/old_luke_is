@@ -35,6 +35,7 @@ class SlideyPages
     @slidey(content)
 
   slidey: (content) ->
+    $('html').removeClass('hero-header')
     $('#content').html(content)
 
 new SlideyPages()
