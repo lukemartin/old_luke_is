@@ -36,6 +36,9 @@ class SlideyPages
 
   slidey: (content) ->
     $('html').removeClass('hero-header')
-    $('#content').html(content)
+    $('#content').velocity(
+      { translateY: '+= 100px' }, 250, ->
+        $(this).html(content)
+    )
 
 new SlideyPages()
