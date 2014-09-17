@@ -106,4 +106,4 @@ class SlideyPages
 
 
 
-new SlideyPages()
+# new SlideyPages()

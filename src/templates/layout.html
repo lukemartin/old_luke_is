@@ -8,6 +8,7 @@
   <!-- Meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <meta charset="utf-8">
+  <base href="/" />
   <title>luke.is{% if page.metadata.title %} {{ page.metadata.title }}{% endif %}</title>
 
   <!-- Styles -->
@@ -16,7 +17,6 @@
 </head>
 
 <body>
-
   <div class="header-wrap">
     <header>
       <div class="header-inner">
@@ -50,10 +50,31 @@
   </div>
 
   <!-- Scripts -->
-  <script src="http://127.0.0.1:35777/livereload.js"></script>
   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="/scripts/jquery.history.min.js"></script>
   <script src="/scripts/velocity.min.js"></script>
   <script src="/scripts/main.js"></script>
+
+  {% if env.mode == 'preview' %}
+  <script src="http://127.0.0.1:35777/livereload.js"></script>
+  {% else %}
+  <script type="text/javascript">
+    var GoSquared = {};
+    GoSquared.acct = "GSN-183620-H";
+    (function(w){
+      function gs(){
+        w._gstc_lt = +new Date;
+        var d = document, g = d.createElement("script");
+        g.type = "text/javascript";
+        g.src = "//d1l6p2sc9645hc.cloudfront.net/tracker.js";
+        var s = d.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(g, s);
+      }
+      w.addEventListener ?
+      w.addEventListener("load", gs, false) :
+      w.attachEvent("onload", gs);
+    })(window);
+  </script>
+  {% endif %}
 </body>
 </html>
