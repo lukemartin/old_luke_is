@@ -11,18 +11,18 @@
         {% for project in projects %}
         <li class="project">
           <div class="project-image">
-            <a href="{{ project.url }}" class="image" data-slidey>
+            <a href="{{ project.url }}" class="image" data-slidey data-title="{{ project.metadata.title }} luke.is working">
               <img src="{{ project.metadata.image }}" alt="{{ project.metadata.title }}">
             </a>
           </div>
           <div class="project-meta">
-            <h2 class="project-title"><a href="{{ project.url }}" title="{{ project.metadata.title }}" data-slidey>{{ project.metadata.title }}</a></h2>
+            <h2 class="project-title"><a href="{{ project.url }}" title="{{ project.metadata.title }}" data-slidey data-title="{{ project.metadata.title }} luke.is working">{{ project.metadata.title }}</a></h2>
             <time class="project-date" datetime="{{ moment(project.metadata.date).format('MMMM YYYY') }}">{{ moment(project.metadata.date).format('MMMM YYYY') }}</time>
             <p>
               {{ project.metadata.short }}
             </p>
             <p>
-              <a href="{{ project.url }}" class="project-read-more" data-slidey>Read more <i class="icon-arrow-right"></i></a>
+              <a href="{{ project.url }}" class="project-read-more" data-slidey data-title="{{ project.metadata.title }} luke.is working">Read more <i class="icon-arrow-right"></i></a>
             </p>
           </div>
         </li>

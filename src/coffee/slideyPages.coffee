@@ -13,7 +13,7 @@ class SlideyPages
     e.preventDefault()
 
     href  = $(e.currentTarget).attr('href')
-    title = $(e.currentTarget).attr('title')
+    title = $(e.currentTarget).data('title')
     level = @getLevel(href)
 
     $.get(href)
@@ -41,9 +41,7 @@ class SlideyPages
 
     @currentLevel = level
 
-    $('html, body').animate({ scrollTop: 165 }, 150)
-
-  slideySibling: (content) ->
+  slideySibling: (content) =>
     $newContent = $(content).css
       opacity: 0
       position: 'absolute'
@@ -61,9 +59,10 @@ class SlideyPages
     )
     $oldContent.velocity({ translateY: newContentHeight, opacity: 0 }, 250, ->
       $oldContent.remove()
+      # $('html, body').animate({ scrollTop: 165 }, 150)
     )
 
-  slideyForwards: (content) ->
+  slideyForwards: (content) =>
     $('html').removeClass('hero-header')
 
     $newContent = $(content).css
@@ -82,9 +81,10 @@ class SlideyPages
     )
     $oldContent.velocity({ translateX: '-100%', opacity: 0 }, 250, ->
       $oldContent.remove()
+      # $('html, body').animate({ scrollTop: 165 }, 150)
     )
 
-  slideyBackwards: (content) ->
+  slideyBackwards: (content) =>
     $newContent = $(content).css
       opacity: 0
       position: 'absolute'
@@ -101,6 +101,7 @@ class SlideyPages
     )
     $oldContent.velocity({ translateX: '100%', opacity: 0 }, 250, ->
       $oldContent.remove()
+      # $('html, body').animate({ scrollTop: 165 }, 150)
     )
 
 
