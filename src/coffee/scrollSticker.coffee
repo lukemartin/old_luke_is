@@ -11,4 +11,4 @@ class ScrollSticker
         $('html').removeClass('nav-fixed')
     )
 
-new ScrollSticker()
+# new ScrollSticker()

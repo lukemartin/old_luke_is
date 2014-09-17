@@ -11,6 +11,11 @@
         <time class="project-date" datetime="{{ moment(page.metadata.date).format('MMMM YYYY') }}">{{ moment(page.metadata.date).format('MMMM YYYY') }}</time>
 
         {{ page.html }}
+
+        <div class="key-skills">
+          <h2>Key skills</h2>
+          {{ page.metadata.skills }}
+        </div>
       </div>
 
     </section>
