@@ -35,4 +35,9 @@
 
     .main-header
       margin: 0 auto
-      width: $bp
+      max-width: $width
+
+@media (min-width: $width)
+  .header-wrap
+    .main-header
+      padding: 10px 0
