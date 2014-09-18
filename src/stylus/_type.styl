@@ -64,3 +64,68 @@ dl
 
 .text-center
   text-align: center
+
+.hero
+  text-align: center
+  margin: 0 auto
+
+  p
+    font-size: 40px
+    line-height: 1.5
+    margin: 0
+
+  span
+    background-color #354b57
+    color: #fff
+    padding: 5px
+
+@media (min-width: $bp)
+  .hero
+    width: 60%
+
+.avatar
+  background-color: #fff
+  border-radius: 50%
+  margin: 0 auto
+  width: 150px
+  height: 150px
+  overflow: hidden
+  position: relative
+
+  img
+    border-radius: 50%
+    width: 140px
+    height: 140px
+    position: relative
+    top: 5px
+    left: 5px
+
+.three-thing
+  position: relative
+
+  .left-part
+    text-align: center
+  .right-part
+    text-align: center
+
+@media (min-width: $bp)
+  .three-thing
+    overflow: hidden
+    min-height: 155px
+
+    .left-part,
+    .right-part
+      width: 35%
+      padding-top: 40px
+
+    .left-part
+      float: left
+      text-align: right
+    .right-part
+      float: right
+      text-align: left
+
+    .avatar
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
