@@ -21,14 +21,14 @@
   <div class="header-wrap colour-blue">
     <header class="main-header">
       <div class="name">
-        <a href="/" class="">site.is/</a>{% if page.metadata.headerUrlTitle %}<span><h1>{{ page.metadata.headerUrlTitle }}</h1></span>{% endif %}
+        <a href="/" class="">site.is{% if page.metadata.headerUrlTitle %}/</a><span><h1>{{ page.metadata.headerUrlTitle }}</h1></span>{% else %}</a>{% endif %}
       </div>
       </a>
       <nav class="main-nav">
         <ul class="unstyled">
-          <li><a href="/working/" title="Work">Work</a></li>
-          <li class="active"><a href="/here/" title="Contact">Contact</a></li>
-          <li><a href="/blogging/" title="Blog">Blog</a></li>
+          <li {% if page.metadata.headerUrlTitle == 'working' %}class="active"{% endif %}><a href="/working/" title="Work">Work</a></li>
+          <li {% if page.metadata.headerUrlTitle == 'here' %}class="active"{% endif %}><a href="/here/" title="Contact">Contact</a></li>
+          <li {% if page.metadata.headerUrlTitle == 'blogging' %}class="active"{% endif %}><a href="/blogging/" title="Blog">Blog</a></li>
         </ul>
       </nav>
     </header>
