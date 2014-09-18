@@ -129,3 +129,30 @@ dl
       position: absolute
       left: 50%
       transform: translateX(-50%)
+
+.backey-back
+  background-color: #354b57
+  color: #fff
+  position: absolute
+  top: 4px
+  left: 0
+  font-size: 12px
+  padding: 5px 10px
+  overflow: hidden
+  opacity: 0.3
+
+@media (min-width: $bp)
+  .backey-back
+    top: 8px
+    width: 32px
+
+    span
+      display: none
+
+    &:hover, &:focus
+      transition: all 0.1s ease-in-out
+      opacity: 1
+      width: 74px
+
+      span
+        display: inline
