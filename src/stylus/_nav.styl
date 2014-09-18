@@ -1,0 +1,26 @@
+.main-nav
+  margin-top: 10px
+
+  li
+    display: inline
+    margin-right: 5px
+
+    a
+      color: #fff
+      font-size: 17px
+      text-transform: lowercase
+
+    &.active
+      a
+        color: #ffc5cf
+        color: #354b57
+
+@media (min-width: $bp)
+  .main-nav
+    position: absolute
+    top: 5px
+    right: 0
+
+    li
+      margin-right: 0
+      margin-left: 5px

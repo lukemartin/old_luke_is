@@ -5,3 +5,34 @@
 body
   overflow-y: scroll
   overflow-x: hidden
+
+.content-wrap
+  .content
+    overflow: hidden
+
+.section-wrap
+  background-color: #fff
+
+  section
+    padding: 10px
+    position: relative
+
+  &.alt
+    background-color: #f2f2f2
+
+@media (min-width: $bp)
+  .section-wrap
+    section
+      margin: 0 auto
+      padding: 20px 0
+      width: $bp
+
+  .cols
+    overflow: hidden
+
+    &.cols-2
+      margin-left: -5%
+      .col
+        float: left
+        margin-left: 5%
+        width: 45%

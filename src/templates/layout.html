@@ -18,29 +18,20 @@
 
 <body>
 
-  <div class="header-wrap">
-    <header>
-      <div class="header-inner">
-        <a href="/" class="">
-          <div class="">
-            <img src="/images/avatar.jpg" />
-          </div>
-          <div class="name h2">Some<span> </span>Name</div>
-        </a>
+  <div class="header-wrap colour-blue">
+    <header class="main-header">
+      <div class="name">
+        <a href="/" class="">site.is/</a>{% if page.metadata.headerUrlTitle %}<span><h1>{{ page.metadata.headerUrlTitle }}</h1></span>{% endif %}
       </div>
-
+      </a>
+      <nav class="main-nav">
+        <ul class="unstyled">
+          <li><a href="/working/" title="Work">Work</a></li>
+          <li class="active"><a href="/here/" title="Contact">Contact</a></li>
+          <li><a href="/blogging/" title="Blog">Blog</a></li>
+        </ul>
+      </nav>
     </header>
-  </div>
-
-  <div class="nav-wrap">
-    <nav class="main-nav">
-      <ul class="unstyled">
-        <li><a href="/about/" title="About">About</a></li>
-        <li><a href="/working/" title="Projects">Projects</a></li>
-        <li><a href="/here/" title="Contact">Contact</a></li>
-        <li><a href="/blogging/" title="Blog">Blog</a></li>
-      </ul>
-    </nav>
   </div>
 
   <div class="content-wrap">
