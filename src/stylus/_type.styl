@@ -39,5 +39,28 @@ a
 p
   font-size: 16px
 
+dl
+  dt
+    font-weight: 400
+  dd
+    margin-left: 30px
+    margin-bottom 10px
+
+@media (min-width: $bp)
+  dl
+    overflow: hidden
+
+    dl, dt
+      display: inline-block
+      word-wrap: break-word
+
+    dt
+      float: left
+      width: 25%
+    dd
+      float: left
+      margin-left: 0
+      width: 75%
+
 .text-center
   text-align: center
