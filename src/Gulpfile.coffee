@@ -14,7 +14,7 @@ gulp.task 'stylus', ->
   gulp.src './stylus/main.styl'
     .pipe stylus
       use: [nib()]
-      sourcemap: { inline: true }
+      # sourcemap: { inline: true }
     .pipe gulp.dest('./contents/styles')
     .pipe livereload(35777)
 
