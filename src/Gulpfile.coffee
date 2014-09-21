@@ -6,6 +6,7 @@ concat     = require 'gulp-concat'
 livereload = require 'gulp-livereload'
 sourcemaps = require 'gulp-sourcemaps'
 stylus     = require 'gulp-stylus'
+uglify     = require 'gulp-uglify'
 nib        = require 'nib'
 
 
@@ -14,7 +15,7 @@ gulp.task 'stylus', ->
   gulp.src './stylus/main.styl'
     .pipe stylus
       use: [nib()]
-      # sourcemap: { inline: true }
+      sourcemap: { inline: true }
     .pipe gulp.dest('./contents/styles')
     .pipe livereload(35777)
 
@@ -31,15 +32,17 @@ gulp.task 'livereload', ->
   gulp.src ['./templates/**/*.html', './contents/**/*.md', './contents/**/*.json']
     .pipe livereload(35777)
 
-# gulp.task 'package', ->
-#   gulp.src './coffee/**/*.coffee'
-#     .pipe coffee({ bare: false }).on('error', gutil.log)
-#     .pipe concat('main.js')
-#     .pipe gulp.dest('./contents/scripts')
-#   gulp.src './sass/**/*.scss'
-#     .pipe sass()
-#     .pipe gulp.dest('./contents/styles')
-
+gulp.task 'package', ->
+  gulp.src './coffee/**/*.coffee'
+    .pipe coffee({ bare: false }).on('error', gutil.log)
+    .pipe concat('main.js')
+    .pipe uglify()
+    .pipe gulp.dest('./contents/scripts')
+  gulp.src './stylus/main.styl'
+    .pipe stylus
+      use: [nib()]
+      compress: true
+    .pipe gulp.dest('./contents/styles')
 
 
 # Default tasks
