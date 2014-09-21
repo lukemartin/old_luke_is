@@ -530,6 +530,12 @@ dl dd {
     display: inline;
   }
 }
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: -10000px;
+  visibility: hidden;
+}
 .button {
   display: inline-block;
   background-color: #354b57;
