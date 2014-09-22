@@ -1,13 +1,15 @@
-# Dev
-    gulp
-    wintersmith preview
+# luke.is
 
-# Build
-    wintersmith build
+Portfolio site of Luke Martin
+
+## Dev
+    make preview
+    make watch
+
+## Build
+    make wbuild
 
 
 ---
 
 * https://www.flickr.com/photos/bittbox/3522868199/in/set-72157618007551568/
-* http://www.texturelovers.com/texture-packs/dog-fur-textures/
-* http://www.freepik.com/free-vector/autumn-polygonal-background_743547.htm
